@@ -1,7 +1,38 @@
 import React from "react";
+import { Route, Switch, Link } from "react-router-dom";
 
-const Cart = () => {
-  return <div>Cart</div>;
+import Payment from "./Payment";
+import Confirmation from "./Confirmation";
+
+const Cart = (props) => {
+  const [paymentFormData, setPaymentFormData] = React.useState(null);
+
+  return (
+    <div>
+      Cart
+      <Link to="/cart/payment">
+        <div>Checkout</div>
+      </Link>
+      <Route
+        exact
+        path="/cart/payment"
+        render={(rp) => (
+          <Payment
+            {...rp}
+            paymentFormData={paymentFormData}
+            setPaymentFormData={setPaymentFormData}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/cart/confirmation"
+        render={(rp) => (
+          <Confirmation {...rp} paymentFormData={paymentFormData} />
+        )}
+      />
+    </div>
+  );
 };
 
 export default Cart;
