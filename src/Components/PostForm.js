@@ -1,22 +1,56 @@
 import React from "react";
 
-function PostForm() {
+function PostForm(props) {
+  const emptyItem = {
+    img: "",
+    name: "",
+    description: "",
+    shipping: "",
+  };
+
+  const [formData, setFormData] = React.useState(emptyItem);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: [event.target.value],
+    });
+  };
+
   return (
     <div className="PostForm">
-      <form className="form-post">
-        <input type="text" placeholder="image url" name="img" />
-        <input type="text" placeholder="item name" name="itemName" />
+      <form className="form-post" onSubmit={handleSubmit}>
         <input
-          className='input-descript'
+          type="text"
+          placeholder="image url"
+          name="img"
+          value={formData.img}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="item name"
+          name="itemName"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          className="input-descript"
           type="text"
           placeholder="item description"
           name="itemDescription"
+          value={formData.description}
+          onChange={handleChange}
         />
+        <div className="btn-container">
+          <input type="submit" className="btn-submit" value="Post" />
+          <input type="submit" className="btn-cancel" value="Cancel" />
+        </div>
       </form>
-      <div className="btn-container">
-        <input type="button" className="btn-submit" value="Post" />
-        <input type="button" className="btn-cancel" value="Cancel" />
-      </div>
     </div>
   );
 }

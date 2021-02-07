@@ -12,6 +12,9 @@ import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
 
 function App() {
+  //URL variable
+  const url = "http://localhost:4000/";
+
   return (
     <div className="App">
       <Nav />

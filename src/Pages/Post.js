@@ -1,13 +1,13 @@
 import React from "react";
-import PostForm from '../Components/PostForm'
+import PostForm from "../Components/PostForm";
 
-const Post = () => {
+const Post = (props) => {
   return (
-  <div>
-    <h1 className="posting-title">Post an Item</h1>
-    <PostForm />
-  </div>
-    );
+    <div>
+      <h1 className="posting-title">Post an Item</h1>
+      <PostForm />
+    </div>
+  );
 };
 
 export default Post;
