@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavButton from './NavButton'
+import CartButton from './CartButton'
 
 const Nav = () => {
   return (
@@ -16,6 +18,8 @@ const Nav = () => {
       <Link to="/cart">
         <div>Cart</div>
       </Link>
+      <NavButton />
+      <CartButton />
     </div>
   );
 };

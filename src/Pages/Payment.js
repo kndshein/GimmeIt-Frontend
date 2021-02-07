@@ -4,7 +4,7 @@ import PaymentForm from "../Components/PaymentForm";
 const Payment = (props) => {
   return (
     <div>
-      Payment
+      <h1 className="payment-info">Payment Info</h1>
       <PaymentForm
         props={props}
         paymentFormData={props.paymentFormData}

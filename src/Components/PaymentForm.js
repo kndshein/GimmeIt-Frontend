@@ -32,8 +32,9 @@ const PaymentForm = (props) => {
 
   return (
     <div className="payment-container">
-      <form onSubmit={handleSubmit}>
+      <form className="form-payment" onSubmit={handleSubmit}>
         <input
+          className="name-payment"
           type="text"
           name="firstName"
           placeholder="First Name"
@@ -42,6 +43,7 @@ const PaymentForm = (props) => {
           onChange={handleChange}
         />
         <input
+          className="lastName-payment"
           type="text"
           name="lastName"
           placeholder="Last Name"
@@ -50,14 +52,16 @@ const PaymentForm = (props) => {
           onChange={handleChange}
         />
         <input
+          className="street-payment"
           type="text"
           name="addressStreet"
-          placeholder="Street Name"
+          placeholder="Street Address"
           required
           value={formData.addressStreet}
           onChange={handleChange}
         />
         <input
+          className="city-payment"
           type="text"
           name="addressCity"
           placeholder="City"
@@ -66,6 +70,7 @@ const PaymentForm = (props) => {
           onChange={handleChange}
         />
         <input
+          className="state-payment"
           type="text"
           name="addressState"
           placeholder="State"
@@ -74,6 +79,7 @@ const PaymentForm = (props) => {
           onChange={handleChange}
         />
         <input
+          className="zip-payment"
           type="text"
           name="addressZipcode"
           placeholder="Zipcode"
@@ -82,7 +88,7 @@ const PaymentForm = (props) => {
           value={formData.addressZipcode}
           onChange={handleChange}
         />
-        <input type="submit" />
+        <input className="btn-payment" type="submit" />
       </form>
     </div>
   );
