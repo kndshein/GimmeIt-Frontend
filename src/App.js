@@ -42,7 +42,6 @@ function App() {
           render={(rp) => <Confirmation {...rp} />}
         />
       </Switch>
-      <Item />
       <BiMenuAltRight
         className="mobile-menu-btn"
         onClick={() => setShowNav(!showNav)}
