@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
@@ -10,14 +10,18 @@ import Nav from "./Components/Nav";
 import Payment from "./Pages/Payment";
 import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
+import { BiMenuAltRight } from "react-icons/bi";
 
 function App() {
   //URL variable
   const url = "http://localhost:4000/";
 
+  // STATE FOR THE MOBILE NAV ANIMATION
+  const [showNav, setShowNav] = useState(false);
+
   return (
     <div className="App">
-      <Nav />
+      <Nav show={showNav} />
       <Switch>
         <Route exact path="/" render={(rp) => <Homepage {...rp} />} />
         <Route path="/post" render={(rp) => <Post {...rp} />} />
@@ -37,6 +41,7 @@ function App() {
           render={(rp) => <Confirmation {...rp} />}
         />
       </Switch>
+      <BiMenuAltRight className="mobile-menu-btn" onClick={() => setShowNav(!showNav) } />
     </div>
   );
 }

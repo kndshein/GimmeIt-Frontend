@@ -8,53 +8,85 @@ html {
 
 /* NAVIGATION CSS */
 .nav-container {
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  height: 300px;
+  /* width: 200px; */
+  bottom: 140px;
+  right: -100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  transition: all .3s ease;
+}
+
+.nav-container.active {
+  right: 70px;
 }
 
 .nav-container a {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 2rem;
   color: white;
   text-decoration: none;
 }
 
 .mobile-menu-btn {
-  margin-bottom: 2rem;
-  background: #333;
-  width: 50px;
-  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  z-index: -1;
+  /* margin-bottom: 2rem; */
+  /* background: rgba(97, 167, 224, .5); */
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  /* border: 3px solid rgb(82, 150, 206); */
+  /* border-radius: 50%; */
 }
 
-.fas.fa-times-circle {
+/* .menu-icon {
+  z-index: 4;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  font-size: 5rem;
+  color: rgb(82, 150, 206);
+} */
+
+.cart-icon {
+  font-size: 3rem;
+  color: rgb(86, 6, 102);
+  z-index: 2;
+}
+
+/* .fas.fa-times-circle {
   font-size: 3rem;
   color: #fff;
   transform: rotate(225deg);
-}
+} */
 
-.home-btn {
+/* .home-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  width: 50px;
-  height: 50px;
+  background: rgba(255, 255, 255, .4);
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgb(86, 6, 102);
   border-radius: 50%;
   z-index: -1;
-}
+} */
 
-.fas.fa-shopping-cart {
+/* .fas.fa-shopping-cart {
   font-size: 2rem;
   color: #333;
   z-index: 2;
-}
+} */
 
 
 /* HOMEPAGE CSS */
