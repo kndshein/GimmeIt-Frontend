@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Switch, Link } from "react-router-dom";
 
 const Profile = () => {
   return <div>Profile</div>;

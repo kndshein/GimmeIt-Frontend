@@ -13,24 +13,26 @@ const Cart = (props) => {
       <Link to="/cart/payment">
         <div>Checkout</div>
       </Link>
-      <Route
-        exact
-        path="/cart/payment"
-        render={(rp) => (
-          <Payment
-            {...rp}
-            paymentFormData={paymentFormData}
-            setPaymentFormData={setPaymentFormData}
-          />
-        )}
-      />
-      <Route
-        exact
-        path="/cart/confirmation"
-        render={(rp) => (
-          <Confirmation {...rp} paymentFormData={paymentFormData} />
-        )}
-      />
+      <Switch>
+        <Route
+          exact
+          path="/cart/payment"
+          render={(rp) => (
+            <Payment
+              {...rp}
+              paymentFormData={paymentFormData}
+              setPaymentFormData={setPaymentFormData}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/cart/confirmation"
+          render={(rp) => (
+            <Confirmation {...rp} paymentFormData={paymentFormData} />
+          )}
+        />
+      </Switch>
     </div>
   );
 };

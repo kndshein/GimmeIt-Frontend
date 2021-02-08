@@ -31,11 +31,11 @@ function App() {
             </Router>
           )}
         />
-        <Route
+        {/* <Route
           exact
           path="/confirmation"
           render={(rp) => <Confirmation {...rp} />}
-        />
+        /> */}
       </Switch>
     </div>
   );
