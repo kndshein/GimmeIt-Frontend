@@ -11,6 +11,7 @@ import Payment from "./Pages/Payment";
 import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
 import { BiMenuAltRight } from "react-icons/bi";
+import Item from './Components/Item'
 
 function App() {
   //URL variable
@@ -41,7 +42,11 @@ function App() {
           render={(rp) => <Confirmation {...rp} />}
         />
       </Switch>
-      <BiMenuAltRight className="mobile-menu-btn" onClick={() => setShowNav(!showNav) } />
+      <Item />
+      <BiMenuAltRight
+        className="mobile-menu-btn"
+        onClick={() => setShowNav(!showNav)}
+      />
     </div>
   );
 }
