@@ -1,11 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import NavButton from './NavButton'
 import CartButton from './CartButton'
 
-const Nav = () => {
+
+const Nav = ({ show }) => {
+
+
   return (
-    <div className="nav-container">
+    <div className={show ? "nav-container active" : "nav-container"}>
       <Link to="/">
         <div>Home</div>
       </Link>
@@ -18,8 +19,6 @@ const Nav = () => {
       <Link to="/cart">
         <div>Cart</div>
       </Link>
-      <NavButton />
-      <CartButton />
     </div>
   );
 };

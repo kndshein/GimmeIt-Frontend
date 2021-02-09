@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   background: rgb(83,83,83);
   background: linear-gradient(180deg, rgba(43,43,43,1) 0%, rgba(0,0,0,1) 100%);
@@ -8,59 +14,73 @@ html {
 
 /* NAVIGATION CSS */
 .nav-container {
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
+  background-color: rgba(93, 75, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 30% 0 0 70%;
+  position: absolute;
+  height: 300px;
+  width: 15rem;
+  bottom: 140px;
+  right: -100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  transition: all .3s ease;
+}
+
+.nav-container.active {
+  right: 0px;
 }
 
 .nav-container a {
+  margin-right: 3rem;
+  font-size: 2rem;
+  display: block;
+  text-align: left;
+  margin-bottom: 2rem;
   color: white;
   text-decoration: none;
 }
 
 .mobile-menu-btn {
-  margin-bottom: 2rem;
-  background: #333;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
-.fas.fa-times-circle {
-  font-size: 3rem;
-  color: #fff;
-  transform: rotate(225deg);
-}
-
-.home-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
   z-index: -1;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fas.fa-shopping-cart {
-  font-size: 2rem;
-  color: #333;
+.cart-icon {
+  font-size: 3rem;
+  color: rgb(86, 6, 102);
   z-index: 2;
 }
 
+/* .fas.fa-shopping-cart {
+  font-size: 2rem;
+  color: #333;
+  z-index: 2;
+} */
 
 /* HOMEPAGE CSS */
 .home-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  height: 200px;
+  background: rgb(107, 28, 235);
+}
+
+.title-text {
+  font-size: 3rem;
+  margin-left: 2rem;
 }
 
 /* POSTFORM CSS */
@@ -165,3 +185,32 @@ html {
   grid-column: 3/4;
   grid-row: 6/7;
 }
+
+/* ITEMS DESIGN */
+.image-container {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.image {
+   border: 3px solid #e0e0e0;
+   height: 30vh;
+   width: 70vw;
+   max-width: 600px;
+   mask-image: rgb(0,0,0);
+    -webkit-mask-image: linear-gradient(0deg, rgba(51,51,51,0) 10%, rgba(0,0,0,0.6530987394957983) 40%, rgba(0,0,0,0.8267682072829132) 55%);
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
+  left: 2rem;
+}
+
