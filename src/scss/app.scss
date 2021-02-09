@@ -1,7 +1,7 @@
-@import '_variables';
+@import "_variables";
 
 html {
-  background: rgb(83,83,83);
+  background: rgb(83, 83, 83);
   background: linear-gradient(180deg, $primaryColor 0%, $secondaryColor 100%);
   min-height: 100%;
   color: $primaryText;
@@ -9,22 +9,22 @@ html {
 
 // NAVIGATION
 .nav-container {
-   position: fixed;
+  position: fixed;
   bottom: 40px;
   right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-      
-   a {
-      color: $primaryText;
-      text-decoration: none;
-         }
+
+  a {
+    color: $primaryText;
+    text-decoration: none;
+  }
 }
 
 .fas.fa-chevron-circle-down {
-    transform: rotate(180deg);
-     font-size: 4rem;
-     color: $primaryText;
-   }
+  transform: rotate(180deg);
+  font-size: 4rem;
+  color: $primaryText;
+}
