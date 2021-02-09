@@ -1,7 +1,8 @@
 import React from "react";
 import Item from '../Components/Item'
+import ListedItems from '../Components/ListedItems'
 
-const Homepage = () => {
+const Homepage = (props) => {
   return (
     <>
     <div className="home-container">
@@ -9,6 +10,7 @@ const Homepage = () => {
       <h1 className="title-text">Gimme.it</h1>
     </div>
     <div className="image-container">
+      <ListedItems listedItems={props.listedItems}/>
       <Item/>
     </div>
     </>

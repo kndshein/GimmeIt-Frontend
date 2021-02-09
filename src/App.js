@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
@@ -17,6 +17,15 @@ function App() {
 
   // STATE FOR THE MOBILE NAV ANIMATION
   const [showNav, setShowNav] = useState(false);
+
+  const [listedItems, setListedItems] = useState(null)
+
+  const getAvaiableItems = (item) => {
+    axios.get(url + "items")
+    .then((items) => {
+      setListedItems(items)
+    })
+  }
 
   const handleLogin = (loginInfo) => {
     console.log(loginInfo);
@@ -45,11 +54,14 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    getAvaiableItems()
+  }, [])
   return (
     <div className="App">
       <Nav show={showNav} />
       <Switch>
-        <Route exact path="/" render={(rp) => <Homepage {...rp} />} />
+        <Route exact path="/" render={(rp) => <Homepage {...rp} listedItems={listedItems}/>} />
         <Route
           exact
           path="/post"
