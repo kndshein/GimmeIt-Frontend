@@ -2,7 +2,7 @@ import React from "react";
 
 const Item = () => {
   return (
-    <div className="image-container">
+    <div className={"image-container"}>
       <img
         className="image"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSQr1vJClS-FmGfsYnIQ8V9ejotHpLrVdd8Q&usqp=CAU"

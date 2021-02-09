@@ -14,8 +14,8 @@ html {
 
 /* NAVIGATION CSS */
 .nav-container {
-  background-color: rgba(93, 75, 255, 0.3);
-  backdrop-filter: blur(10px);
+  background-color: rgba(34, 67, 255, 0.3);
+  backdrop-filter: blur(5px);
   border-radius: 30% 0 0 70%;
   position: absolute;
   height: 300px;
@@ -83,6 +83,13 @@ html {
   margin-left: 2rem;
 }
 
+span.dot {
+  color: gold;
+  font-size: 8rem;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
 /* POSTFORM CSS */
 .posting-title {
   text-align: center;
@@ -125,7 +132,7 @@ html {
 .btn-cancel {
   padding: .6rem;
   margin-left: 1rem;
-  max-width: 200px;
+  max-width: 100px;
   width: 15vw;
 }
 

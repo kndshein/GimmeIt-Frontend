@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
@@ -18,8 +18,11 @@ function App() {
   //URL variable
   const url = "http://localhost:4000/";
 
+
   // STATE FOR THE MOBILE NAV ANIMATION
   const [showNav, setShowNav] = useState(false);
+  // STATE FOR ITEMS
+
 
   const handleLogin = (loginInfo) => {
     console.log(loginInfo);

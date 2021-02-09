@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CartButton from './CartButton'
 
 
-const Nav = ({ show }) => {
+const Nav = ({ showNav, show, setShowNav }) => {
 
 
   return (
