@@ -5,14 +5,11 @@ import axios from "axios";
 import "./App.css";
 
 import Cart from "./Pages/Cart";
-import Confirmation from "./Pages/Confirmation";
 import Homepage from "./Pages/Homepage";
 import Nav from "./Components/Nav";
-import Payment from "./Pages/Payment";
 import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
 import { BiMenuAltRight } from "react-icons/bi";
-import Item from "./Components/Item";
 
 function App() {
   //URL variable
@@ -36,12 +33,28 @@ function App() {
       });
   };
 
+  const handlePost = (postInfo) => {
+    console.log(postInfo);
+    axios.get(url + "donors/item/create/", {
+      headers: { "auth-token": sessionStorage.getItem("token") },
+      params: {
+        img: postInfo.img[0],
+        name: postInfo.name[0],
+        description: postInfo.description[0],
+      },
+    });
+  };
+
   return (
     <div className="App">
       <Nav show={showNav} />
       <Switch>
         <Route exact path="/" render={(rp) => <Homepage {...rp} />} />
-        <Route path="/post" render={(rp) => <Post {...rp} />} />
+        <Route
+          exact
+          path="/post"
+          render={(rp) => <Post {...rp} handlePost={handlePost} />}
+        />
         <Route
           exact
           path="/profile"
