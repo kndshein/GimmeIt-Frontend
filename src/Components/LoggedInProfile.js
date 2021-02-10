@@ -6,7 +6,7 @@ const LoggedInProfile = (props) => {
 
   const checkLogin = () => {
     axios
-      .get("http://localhost:4000/donors/profile", {
+      .get(props.url + "donors/profile", {
         headers: { "auth-token": sessionStorage.getItem("token") },
       })
       .then((response) => setProfile(response.data));

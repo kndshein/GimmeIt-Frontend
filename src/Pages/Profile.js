@@ -37,7 +37,7 @@ const Profile = (props) => {
     return (
       <div>
         <div>poop</div>
-        <LoggedInProfile handleLogout={handleLogout} />
+        <LoggedInProfile handleLogout={handleLogout} url={props.url} />
       </div>
     );
   };
