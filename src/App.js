@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
@@ -7,16 +7,25 @@ import "./App.css";
 import Cart from "./Pages/Cart";
 import Homepage from "./Pages/Homepage";
 import Nav from "./Components/Nav";
+import Navbar from "./Components/Navbar";
 import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
-import { BiMenuAltRight } from "react-icons/bi";
 
 function App() {
   //URL variable
   const url = "http://localhost:4000/";
-
   // STATE FOR THE MOBILE NAV ANIMATION
-  const [showNav, setShowNav] = useState(false);
+  // const [showNav, setShowNav] = useState(false);
+
+  // STATE FOR ITEMS
+
+  const [listedItems, setListedItems] = useState(null);
+
+  const getAvailableItems = (item) => {
+    axios.get(url + "items").then((items) => {
+      setListedItems(items);
+    });
+  };
 
   const handlePost = (postInfo) => {
     axios.get(url + "donors/item/create/", {
@@ -29,28 +38,18 @@ function App() {
     });
   };
 
-  // const handleLogin = (loginInfo) => {
-  //   axios
-  //     .post(url + "donors/login", {
-  //       email: loginInfo.email[0],
-  //       password: loginInfo.password[0],
-  //     })
-  //     .then((data) => {
-  //       sessionStorage.setItem("token", data.data.data.token);
-  //     })
-  //     .then(() => {
-  //       console.log(sessionStorage.getItem("token"));
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.response);
-  //     });
-  // };
+  useEffect(() => {
+    getAvailableItems();
+  }, []);
 
   return (
     <div className="App">
-      <Nav show={showNav} />
       <Switch>
-        <Route exact path="/" render={(rp) => <Homepage {...rp} />} />
+        <Route
+          exact
+          path="/"
+          render={(rp) => <Homepage {...rp} listedItems={listedItems} />}
+        />
         <Route
           exact
           path="/post"
@@ -71,10 +70,7 @@ function App() {
           )}
         />
       </Switch>
-      <BiMenuAltRight
-        className="mobile-menu-btn"
-        onClick={() => setShowNav(!showNav)}
-      />
+      <Navbar />
     </div>
   );
 }

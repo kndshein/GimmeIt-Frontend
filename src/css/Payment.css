@@ -1,0 +1,53 @@
+.payment-info {
+  text-align: center;
+}
+
+.form-payment {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.form-payment input {
+  max-width: 500px;
+  padding: .6rem;
+  margin-bottom: 3rem;
+}
+
+.name-payment {
+  grid-column: 3/7;
+  grid-row: 1/2;
+}
+
+.lastName-payment {
+  grid-column: 3/7;
+  grid-row: 2/3;
+}
+
+.street-payment {
+  grid-column: 3/7;
+  grid-row: 3/4;
+}
+
+.zip-payment {
+  grid-column: 3/4  ;
+  grid-row: 5/6;
+}
+
+.city-payment {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  
+}
+
+.state-payment {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+
+.btn-payment {
+  grid-column: 3/4;
+  grid-row: 6/7;
+}

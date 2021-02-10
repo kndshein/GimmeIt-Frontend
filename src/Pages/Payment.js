@@ -1,5 +1,6 @@
 import React from "react";
 import PaymentForm from "../Components/PaymentForm";
+import '../css/Payment.css'
 
 const Payment = (props) => {
   return (
