@@ -1,4 +1,5 @@
 import React from "react"
+import '../css/Item.css'
 
 const ListedItems = (props) =>{
 
@@ -12,7 +13,7 @@ const ListedItems = (props) =>{
                         <img
                           className="image"
                           src={item.img}
-                          alt="desk"
+                          alt={item.name}
                         />
                         <div className="image-text">
                           <h2 className="item-cardname">{item.name}</h2>

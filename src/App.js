@@ -60,32 +60,37 @@ function App() {
     getAvaiableItems()
   }, [])
   return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/" render={(rp) => <Homepage {...rp} listedItems={listedItems}/>} />
-        <Route
-          exact
-          path="/post"
-          render={(rp) => <Post {...rp} handlePost={handlePost} />}
-        />
-        <Route
-          exact
-          path="/profile"
-          render={(rp) => <Profile {...rp} handleLogin={handleLogin} />}
-        />
-        <Route
-          exact
-          path="/cart"
-          render={(rp) => (
-            <Router>
-              <Cart {...rp} />
-            </Router>
-          )}
-        />
-      </Switch>
-      {/* <Nav showNav={ showNav } setShowNav={ setShowNav } /> */}
-      <Navbar  />
-    </div>
+    <>
+      <div className="App">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={(rp) => <Homepage {...rp} listedItems={listedItems} />}
+          />
+          <Route
+            exact
+            path="/post"
+            render={(rp) => <Post {...rp} handlePost={handlePost} />}
+          />
+          <Route
+            exact
+            path="/profile"
+            render={(rp) => <Profile {...rp} handleLogin={handleLogin} />}
+          />
+          <Route
+            exact
+            path="/cart"
+            render={(rp) => (
+              <Router>
+                <Cart {...rp} />
+              </Router>
+            )}
+          />
+        </Switch>
+        <Navbar />
+      </div>
+    </>
   );
 }
 
