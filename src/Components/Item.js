@@ -1,16 +1,16 @@
 import React from "react";
 import '../css/Item.css'
 
-const Item = () => {
+const Item = (props) => {
   return (
     <div className={"image-container"}>
       <img
         className="image"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSQr1vJClS-FmGfsYnIQ8V9ejotHpLrVdd8Q&usqp=CAU"
+        src= {props.itemData.img}
         alt="desk"
       />
-      <div className="image-text">
-        <h2 className="item-cardname">Office Desk</h2>
+      <div className="image-text" >
+        <h2 className="item-cardname">{props.itemData.name}</h2>
       </div>
     </div>
   );
