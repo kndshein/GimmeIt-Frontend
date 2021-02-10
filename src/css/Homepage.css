@@ -9,9 +9,11 @@
 }
 
 .logo-container {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 15vh;
 }
 
 .title-text {
@@ -24,4 +26,14 @@ span.dot {
   font-size: 4rem;
   margin-right: -5px;
   margin-left: -5px;
+}
+
+@media (min-width: 900px) {
+  .title-text {
+    font-size: 5rem;
+  }
+
+  span.dot {
+    font-size: 6rem;
+  }
 }

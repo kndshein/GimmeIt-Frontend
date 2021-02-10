@@ -14,10 +14,7 @@ import Profile from "./Pages/Profile";
 function App() {
   //URL variable
   const url = "http://localhost:4000/";
-  // STATE FOR THE MOBILE NAV ANIMATION
-  // const [showNav, setShowNav] = useState(false);
-
-  // STATE FOR ITEMS
+  
 
   const [listedItems, setListedItems] = useState(null);
 

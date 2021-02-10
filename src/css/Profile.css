@@ -1,5 +1,5 @@
 .login-page {
-   margin-top: 3rem;
+   margin-top: 20rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -22,7 +22,7 @@
 }
 
 .form-email, .form-password {
-   padding: .4rem;
+   padding: .5rem;
    max-width: 300px;
    width: 40vw;
 }
@@ -32,7 +32,7 @@
 }
 
 .btn-login {
-   margin-top: 1rem;
+   margin-top: 2rem;
    padding: .5rem;
-   width: 10vw;
+   width: 100px;
 }
