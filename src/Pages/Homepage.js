@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Item from '../Components/Item'
-import ListedItems from '../Components/ListedItems'
+import Item from "../Components/Item";
+import ListedItems from "../Components/ListedItems";
 import Nav from "../Components/Nav";
-import '../css/Homepage.css'
-import '../css/Nav.css'
+import "../css/Homepage.css";
+import "../css/Nav.css";
 
 const Homepage = (props) => {
   return (
