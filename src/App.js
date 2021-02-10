@@ -20,6 +20,15 @@ function App() {
 
   // STATE FOR ITEMS
 
+  const [listedItems, setListedItems] = useState(null)
+
+  const getAvaiableItems = (item) => {
+    axios.get(url + "items")
+    .then((items) => {
+      setListedItems(items)
+    })
+  }
+
   const handleLogin = (loginInfo) => {
     console.log(loginInfo);
     axios
@@ -47,10 +56,13 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    getAvaiableItems()
+  }, [])
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" render={(rp) => <Homepage {...rp} />} />
+        <Route exact path="/" render={(rp) => <Homepage {...rp} listedItems={listedItems}/>} />
         <Route
           exact
           path="/post"
