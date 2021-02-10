@@ -13,7 +13,7 @@ import Profile from "./Pages/Profile";
 
 function App() {
   //URL variable
-  const url = "http://localhost:4000/";
+  const url = "https://https://giveaway-kck.herokuapp.com/";
   // STATE FOR THE MOBILE NAV ANIMATION
   // const [showNav, setShowNav] = useState(false);
 
