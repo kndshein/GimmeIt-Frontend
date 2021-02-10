@@ -5,7 +5,7 @@ const Post = (props) => {
   return (
     <div>
       <h1 className="posting-title">Post an Item</h1>
-      <PostForm />
+      <PostForm handlePost={props.handlePost} />
     </div>
   );
 };

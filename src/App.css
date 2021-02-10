@@ -7,74 +7,64 @@
 html {
   background: rgb(83,83,83);
   background: linear-gradient(180deg, rgba(43,43,43,1) 0%, rgba(0,0,0,1) 100%);
-  min-height: 100%;
+  min-height: 100vh;
   color: #fff;
 }
 
-
+.App {
+  display: flex;
+  flex-direction: column;
+}
 /* NAVIGATION CSS */
-.nav-container {
+/* .nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgba(34, 67, 255, 0.3);
   backdrop-filter: blur(5px);
   border-radius: 30% 0 0 70%;
   position: absolute;
-  height: 300px;
-  width: 15rem;
-  bottom: 140px;
+  bottom: 90px;
   right: -100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  width: 11rem;
+  height: 17rem;
   transition: all .3s ease;
 }
 
 .nav-container.active {
-  right: 0px;
+  right: 0;
 }
 
 .nav-container a {
   margin-right: 3rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: block;
-  text-align: left;
-  margin-bottom: 2rem;
+  text-align: right;
+  margin-bottom: 1.5rem;
   color: white;
   text-decoration: none;
 }
 
+.mobile-btn {
+  
+}
+
 .mobile-menu-btn {
   position: fixed;
-  bottom: 50px;
-  right: 60px;
-  z-index: -1;
+  bottom: 30px;
+  right: 20px;
   width: 60px;
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cart-icon {
-  font-size: 3rem;
-  color: rgb(86, 6, 102);
-  z-index: 2;
-}
-
-/* .fas.fa-shopping-cart {
-  font-size: 2rem;
-  color: #333;
-  z-index: 2;
 } */
 
 /* HOMEPAGE CSS */
-.home-container {
-  display: flex;
+/* .home-container { */
+  /* display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
-  color: #fff;
+  align-items: flex-end; */
+  /* color: #fff;
   text-align: left;
-  height: 200px;
+  height: 100%;
   background: rgb(107, 28, 235);
 }
 
@@ -88,10 +78,10 @@ span.dot {
   font-size: 8rem;
   margin-right: -10px;
   margin-left: -10px;
-}
+} */
 
 /* POSTFORM CSS */
-.posting-title {
+/* .posting-title {
   text-align: center;
   color: #fff;
 }
@@ -134,10 +124,10 @@ span.dot {
   margin-left: 1rem;
   max-width: 100px;
   width: 15vw;
-}
+} */
 
 /* PAYMENT FORM */
-.payment-info {
+/* .payment-info {
   text-align: center;
 }
 
@@ -150,10 +140,8 @@ span.dot {
 }
 
 .form-payment input {
-  /* grid-column: auto; */
   max-width: 500px;
   padding: .6rem;
-  /* width: 70vw; */
   margin-bottom: 3rem;
 }
 
@@ -191,10 +179,10 @@ span.dot {
 .btn-payment {
   grid-column: 3/4;
   grid-row: 6/7;
-}
+} */
 
 /* ITEMS DESIGN */
-.image-container {
+/* .image-container {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -219,5 +207,5 @@ span.dot {
   height: 4rem;
   width: 100%;
   left: 2rem;
-}
+} */
 

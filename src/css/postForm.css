@@ -1,0 +1,44 @@
+.posting-title {
+  text-align: center;
+  color: #fff;
+}
+
+.form-post {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-post input {
+  max-width: 500px;
+  padding: .6rem;
+  width: 70vw;
+  margin-bottom: 6rem;
+}
+
+.input-descript {
+  height: 3rem;
+  
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-submit {
+  margin-right: 1rem;
+  width: 15vw;
+  max-width: 200px;
+  padding: .6rem;
+}
+
+.btn-cancel {
+  padding: .6rem;
+  margin-left: 1rem;
+  max-width: 100px;
+  width: 15vw;
+}

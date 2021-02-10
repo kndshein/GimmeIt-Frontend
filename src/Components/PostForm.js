@@ -1,4 +1,6 @@
 import React from "react";
+import '../css/postForm.css'
+
 
 function PostForm(props) {
   const emptyItem = {
@@ -8,10 +10,11 @@ function PostForm(props) {
     shipping: "",
   };
 
-  const [formData, setFormData] = React.useState(emptyItem);
+  const [formData, setFormData] = React.useState(emptyItem)
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    props.handlePost(formData);
   };
 
   const handleChange = (event) => {
@@ -34,7 +37,7 @@ function PostForm(props) {
         <input
           type="text"
           placeholder="item name"
-          name="itemName"
+          name="name"
           value={formData.name}
           onChange={handleChange}
         />
@@ -42,7 +45,7 @@ function PostForm(props) {
           className="input-descript"
           type="text"
           placeholder="item description"
-          name="itemDescription"
+          name="description"
           value={formData.description}
           onChange={handleChange}
         />

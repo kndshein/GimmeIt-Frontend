@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Item from '../Components/Item'
+import '../css/Homepage.css'
 
 const Homepage = () => {
 

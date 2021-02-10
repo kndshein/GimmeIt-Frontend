@@ -1,0 +1,44 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(34, 67, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 30% 0 0 70%;
+  position: absolute;
+  bottom: 90px;
+  right: -100%;
+  width: 11rem;
+  height: 17rem;
+  transition: all .3s ease;
+}
+
+.nav-container.active {
+  right: 0;
+}
+
+.nav-items {
+   list-style: none;
+}
+
+.nav-container a {
+  margin-right: 3rem;
+  font-size: 1.7rem;
+  display: block;
+  text-align: right;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-btn {
+  
+}
+
+.mobile-menu-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+}

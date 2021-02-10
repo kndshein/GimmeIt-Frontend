@@ -1,0 +1,21 @@
+.home-container {
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: flex-end; */
+  color: #fff;
+  text-align: left;
+  height: 100%;
+  background: rgb(107, 28, 235);
+}
+
+.title-text {
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+span.dot {
+  color: gold;
+  font-size: 8rem;
+  margin-right: -10px;
+  margin-left: -10px;
+}
