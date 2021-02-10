@@ -42,7 +42,7 @@ function PostForm(props) {
           onChange={handleChange}
         />
         <input
-          className="input-descript"
+          className="input-description"
           type="text"
           placeholder="item description"
           name="description"

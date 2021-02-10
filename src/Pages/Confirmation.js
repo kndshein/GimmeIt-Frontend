@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/Payment.css'
 
 const Confirmation = (props) => {
   const handlePaymentConfirm = (event) => {
@@ -6,9 +7,9 @@ const Confirmation = (props) => {
     props.history.replace("/cart");
   };
   return (
-    <div>
-      Confirmation
+    <div className="confirm-container">
       <div className="buyer-container">
+        <h1 className="confirmation">Please Confirm Information</h1>
         <div className="name">
           {props.paymentFormData.firstName} {props.paymentFormData.lastName}
         </div>
@@ -20,7 +21,15 @@ const Confirmation = (props) => {
           {props.paymentFormData.addressZipcode}
         </div>
       </div>
-      <button onClick={handlePaymentConfirm}>Confirm</button>
+      <div className="btn-confirmation">
+        <button
+          className="btn-confirm"
+          id="confirmation-btn"
+          onClick={handlePaymentConfirm}
+        >
+          Confirm
+        </button>
+      </div>
     </div>
   );
 };

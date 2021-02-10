@@ -1,9 +1,17 @@
 .posting-title {
   text-align: center;
   color: #fff;
+  margin-top: 3rem;
+}
+
+.PostForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-post {
+  width: 60vw;
   margin-top: 8rem;
   display: flex;
   flex-direction: column;
@@ -14,25 +22,32 @@
 .form-post input {
   max-width: 500px;
   padding: .6rem;
-  width: 70vw;
+  width: 60vw;
   margin-bottom: 6rem;
 }
 
-.input-descript {
-  height: 3rem;
-  
+.input-description {
+  height: 2rem;
 }
 
 .btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
-.btn-submit {
+.btn-container input {
+  width: 90%;
+  /* height: 40px; */
+  margin: 0 1rem;
+  max-width: 100px;
+}
+
+/* .btn-submit {
+  display: block;
   margin-right: 1rem;
-  width: 15vw;
-  max-width: 200px;
+  max-width: 100px;
   padding: .6rem;
 }
 
@@ -41,4 +56,4 @@
   margin-left: 1rem;
   max-width: 100px;
   width: 15vw;
-}
+} */

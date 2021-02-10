@@ -48,6 +48,47 @@
 }
 
 .btn-payment {
-  grid-column: 3/4;
+  cursor: pointer;
+  grid-column: 4/6;
+  align-items: center;
   grid-row: 6/7;
+  width: 100px;
+}
+
+/* CONFIRMATION STYLES */
+.confirm-container {
+  border: 2px solid #fff;
+  margin: 2rem 2rem;
+}
+
+.buyer-container {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  line-height: 25px;
+  
+}
+
+.street-address {
+  line-height: 25px;
+}
+
+.confirmation {
+  margin: 2rem 0;
+}
+
+.btn-confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmation-btn {
+  margin: 2rem 0;
+  padding: .3rem;
 }
