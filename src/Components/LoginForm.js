@@ -1,6 +1,7 @@
 import React from "react";
 
 const LoginForm = (props) => {
+  console.log("loginForm props - ", props);
   // empty object for formData state
   const emptyLoginFormData = {
     email: "",

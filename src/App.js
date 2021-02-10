@@ -18,23 +18,7 @@ function App() {
   // STATE FOR THE MOBILE NAV ANIMATION
   const [showNav, setShowNav] = useState(false);
 
-  const handleLogin = (loginInfo) => {
-    console.log(loginInfo);
-    axios
-      .post(url + "donors/login", {
-        email: loginInfo.email[0],
-        password: loginInfo.password[0],
-      })
-      .then((data) => {
-        sessionStorage.setItem("token", data.data.data.token);
-      })
-      .then(() => {
-        console.log(sessionStorage.getItem("token"));
-      });
-  };
-
   const handlePost = (postInfo) => {
-    console.log(postInfo);
     axios.get(url + "donors/item/create/", {
       headers: { "auth-token": sessionStorage.getItem("token") },
       params: {
@@ -44,6 +28,23 @@ function App() {
       },
     });
   };
+
+  // const handleLogin = (loginInfo) => {
+  //   axios
+  //     .post(url + "donors/login", {
+  //       email: loginInfo.email[0],
+  //       password: loginInfo.password[0],
+  //     })
+  //     .then((data) => {
+  //       sessionStorage.setItem("token", data.data.data.token);
+  //     })
+  //     .then(() => {
+  //       console.log(sessionStorage.getItem("token"));
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.response);
+  //     });
+  // };
 
   return (
     <div className="App">
@@ -58,7 +59,7 @@ function App() {
         <Route
           exact
           path="/profile"
-          render={(rp) => <Profile {...rp} handleLogin={handleLogin} />}
+          render={(rp) => <Profile {...rp} url={url} />}
         />
         <Route
           exact
