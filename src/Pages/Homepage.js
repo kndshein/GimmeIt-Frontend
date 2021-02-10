@@ -14,7 +14,7 @@ const Homepage = (props) => {
             Gimme<span className="dot">.</span>it
           </h1>
         </div>
-        <Nav/>
+        {/* <Nav/> */}
       </div>
       <div className="image-container">
         <ListedItems listedItems={props.listedItems} />
