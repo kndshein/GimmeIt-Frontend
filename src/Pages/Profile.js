@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Route, Switch, Link } from "react-router-dom";
+import '../css/Profile.css'
 
 import LoginForm from "../Components/LoginForm";
 import LoggedInProfile from "../Components/LoggedInProfile";
@@ -44,8 +45,8 @@ const Profile = (props) => {
 
   const notLoggedIn = () => {
     return (
-      <div>
-        Profile
+      <div className="login-page">
+        <h1 className="profile-title">Profile</h1>
         <LoginForm props={props} handleLogin={handleLogin} />
       </div>
     );

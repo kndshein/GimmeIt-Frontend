@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/Profile.css'
 
 const LoginForm = (props) => {
   console.log("loginForm props - ", props);
@@ -45,7 +46,7 @@ const LoginForm = (props) => {
           value={formData.password}
           onChange={handleChange}
         />
-        <input className="btn-login" type="submit" />
+        <input className="btn-login" type="submit" value='Login'/>
       </form>
     </div>
   );
