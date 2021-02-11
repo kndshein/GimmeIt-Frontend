@@ -76,3 +76,9 @@
   margin: 2rem 0 2rem 0;
   display: block;
 }
+
+/* @media (min-width: 900px) {
+  .image {
+    width: 50vw;
+  }
+} */

@@ -66,6 +66,7 @@
   }
 
   .nav-items a {
+    font-size: 1.5rem;
     margin-top: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -73,6 +74,7 @@
 
   .nav-items a:hover {
     color: gold;
+    font-size: 1.6rem;
   }
 
   .mobile-menu-btn {

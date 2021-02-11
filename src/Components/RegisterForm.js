@@ -46,7 +46,7 @@ const RegisterForm = (props) => {
           className="form-firstName"
           type="text"
           name="firstName"
-          placeholder="firstName"
+          placeholder="first name"
           required
           value={formData.firstName}
           onChange={handleChange}
@@ -55,7 +55,7 @@ const RegisterForm = (props) => {
           className="form-lastName"
           type="text"
           name="lastName"
-          placeholder="lastName"
+          placeholder="last name"
           required
           value={formData.lastName}
           onChange={handleChange}
@@ -78,7 +78,7 @@ const RegisterForm = (props) => {
           value={formData.email}
           onChange={handleChange}
         />
-        <input className="btn-login" type="submit" value='Login'/>
+        <input className="register-btn" type="submit" value='Register'/>
       </form>
     </div>
   );

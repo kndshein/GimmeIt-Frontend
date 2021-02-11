@@ -4,6 +4,11 @@
    margin-top: 3rem;
 }
 
+.register-title {
+   display: block;
+   margin-bottom: 4rem;
+}
+
 .login-page {
    /* margin-top: 10rem; */
    display: flex;
@@ -28,10 +33,15 @@
    margin: 10rem 0;
 }
 
-.form-email, .form-password {
+.form-email, 
+.form-password, 
+.form-username,
+.form-firstName, 
+.form-lastName {
    padding: .6rem;
    max-width: 300px;
    width: 40vw;
+   margin-bottom: 1rem;
 }
 
 .form-email {
@@ -40,6 +50,20 @@
 
 .btn-login {
    margin-top: 2rem;
+   
    padding: .5rem;
    width: 100px;
+}
+
+.register-btn {
+   margin-top: 2rem;
+   padding: .5rem;
+   width: 5rem;
+}
+
+.login-btn {
+   margin-top: 2rem;
+   padding: .5rem;
+   width: 5rem;
+   margin-bottom: 5rem;
 }
