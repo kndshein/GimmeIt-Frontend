@@ -1,0 +1,33 @@
+.team-container {
+   margin-top: 5rem;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+}
+
+.member-container {
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.member-container h3 {
+   margin-top: 1rem;
+   text-align: center;
+}
+
+.member-container img {
+   margin-left: 2rem;
+   margin-top: 1rem;
+   width: 200px;
+   height: 200px;
+}
+
+.member-container p {
+   display: inline-block;
+   max-width: 500px;
+   margin: 1rem 6rem ;
+   text-align: center;
+}

@@ -33,6 +33,9 @@ function Navbar() {
            <li className="cart">
              <Link to="/cart">Cart</Link>
            </li>
+           <li className="team">
+             <Link to="/team">Team</Link>
+           </li>
          </ul>
        </nav>
      </>

@@ -1,3 +1,8 @@
+.gimme {
+  width: 50vw;
+  height: 15vh;
+}
+
 .home-container {
   display: flex;
   justify-content: space-between;
@@ -18,12 +23,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
+  height: 20vh;
 }
 
 .title-text {
+  display: block;
   font-size: 3rem;
   margin-left: 2rem;
+  margin-bottom: 2rem;
 }
 
 span.dot {

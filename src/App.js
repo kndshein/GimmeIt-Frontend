@@ -11,6 +11,7 @@ import Nav from "./Components/Nav";
 import Navbar from "./Components/Navbar";
 import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
+import Team from './Pages/Team'
 
 function App() {
   //URL variable
@@ -68,6 +69,11 @@ function App() {
             </Router>
           )}
         />
+        <Route exact path="/team" render={(rp) => (
+          <Router>
+            <Team P{...rp} url={url}/>
+          </Router>
+        )} />
       </Switch>
       <Navbar />
     </div>

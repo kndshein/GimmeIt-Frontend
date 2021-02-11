@@ -46,7 +46,7 @@ const Profile = (props) => {
   const notLoggedIn = () => {
     return (
       <div className="login-page">
-        <h1 className="profile-title">Profile</h1>
+        <h2 className="profile-title">Login to your account</h2>
         <LoginForm props={props} handleLogin={handleLogin} />
       </div>
     );
