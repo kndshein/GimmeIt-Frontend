@@ -5,7 +5,9 @@ import axios from "axios"
 const ListedItems = (props) => {
   const [toggleState, setToggleState] = React.useState(null);
 
-  
+  React.useEffect(() => {
+    props.getAvailableItems()
+  }, [props.cartItems])
 
   const loaded = () => {
     const handleAddCart = (item) => {
@@ -27,24 +29,30 @@ const ListedItems = (props) => {
     return (
       <div>
         {props.listedItems.data.map((item, index) => {
-          console.log(item);
-          return (
-            <div
-              className={`image-container${
-                toggleState?.active === index ? " active" : ""
-              }`}
-              onClick={() => handleClick(index)}
-              key={index}
-            >
-              <img className="image" src={item.img} alt="desk" />
-              <div className="image-text">
-                <p className="item-description">{item.description}</p>
-                <h2 className="item-cardname">{item.name}</h2>
+          // console.log(item);
+          if(item.available){
+            
+            return (
+              <div
+                className={`image-container${
+                  toggleState?.active === index ? " active" : ""
+                }`}
+                onClick={() => handleClick(index)}
+                key={index}
+              >
+                <img className="image" src={item.img} alt="desk" />
+                <div className="image-text">
+                  <p className="item-description">{item.description}</p>
+                  <h2 className="item-cardname">{item.name}</h2>
+                </div>
+                <button onClick={() => handleAddCart(item)}>Add to Cart</button>
               </div>
-              <button onClick={() => handleAddCart(item)}>Add to Cart</button>
-            </div>
-          );
-        })}
+            );
+          } else{
+            console.log("item is unavailable")
+            return null
+          }
+          })}
       </div>
     );
   };
