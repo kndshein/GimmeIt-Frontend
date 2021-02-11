@@ -1,28 +1,46 @@
-import React from "react"
-import '../css/Item.css'
-import Item from './Item'
+import React from "react";
+import "../css/Item.css";
 
-const ListedItems = (props) =>{
+const ListedItems = (props) => {
+  const [toggleState, setToggleState] = React.useState(null);
 
-    const loaded = () => {
-        return(
-            <div >
-            {props.listedItems.data.map((item) =>{
-                    console.log(item)
-                    return(
-                        <Item itemData={item}/>
-                    )         
-                })}
-        </div>
-        )
-    }
+  const loaded = () => {
+    const handleClick = (index) => {
+      setToggleState({ active: index });
+      if (toggleState?.active === index) {
+        setToggleState({ active: null });
+      }
+    };
 
-    const loading = () =>{
-        return <h1>LOADING...</h1>
-    }
-    console.log(props.listedItems)
-    
-    return props.listedItems ? loaded() : loading()
-}
+    return (
+      <div>
+        {props.listedItems.data.map((item, index) => {
+          console.log(item);
+          return (
+            <div
+              className={`image-container${
+                toggleState?.active === index ? " active" : ""
+              }`}
+              onClick={() => handleClick(index)}
+              key={index}
+            >
+              <img className="image" src={item.img} alt="desk" />
+              <div className="image-text">
+                <h2 className="item-cardname">{item.name}</h2>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
-export default ListedItems
+  const loading = () => {
+    return <h1>LOADING...</h1>;
+  };
+  console.log(props.listedItems);
+
+  return props.listedItems ? loaded() : loading();
+};
+
+export default ListedItems;
