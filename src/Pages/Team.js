@@ -4,30 +4,41 @@ import '../css/Team.css'
 function Team() {
    return (
      <>
-       <div className="team-container">
          <h1 className="theTeam">The Team</h1>
-       </div>
-       <div className="member-container">
-         <img src="" alt="" className="kaung" />
-         <h3>Kaung S.</h3>
+       <div className="kaung-container">
+         <img
+           src="https://media-exp1.licdn.com/dms/image/C5603AQHknIJvCodDZQ/profile-displayphoto-shrink_800_800/0/1551910400554?e=1618444800&v=beta&t=Fg0SrO8HEsnzelGXR1_LSZx7uN6sl-a7ax9QHC4q8Tk"
+           alt=""
+           className="img1"
+         />
          <p className="about-kaung">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-           voluptas impedit quasi laborum architecto deserunt magni ipsum.
-           Labore, veritatis libero.
+           <span className="kaung-name">Kaung Shein</span>
+           <br />
+           <br />
+           Simply chasing his American Dream.
          </p>
-         <img src="" alt="" className="clay" />
-         <h3>Clayton Miller</h3>
+       </div>
+       <div className="clay-container">
+         <img
+           src="https://media-exp1.licdn.com/dms/image/C5603AQEdDE-3lsvejA/profile-displayphoto-shrink_800_800/0/1519092414968?e=1618444800&v=beta&t=e-8-405I1JqIr34Tm5nX9jgHkUiLGukL9zIzK6lHoQs"
+           alt=""
+           className="img2"
+         />
          <p className="about-clay">
-           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore,
-           sit! Natus iste cumque eaque nostrum debitis fugiat beatae voluptatum
-           aperiam!
+           <span className="clay-name">Clayton Miller</span>
+           <br />
+           <br /> Meet Clayton. He lives in Illinois.
          </p>
-         <img src="https://i.imgur.com/UWmDpTT.jpg" alt="" className="kel" />
-         <h3>Kel Strother</h3>
+       </div>
+       <div className="kel-container">
+         <img src="https://i.imgur.com/UWmDpTT.jpg" alt="" className="img3" />
+
          <p className="about-kel">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-           asperiores dicta esse necessitatibus veniam quidem quisquam
-           consectetur. Ad, ducimus similique?
+           <span className="kel-name">Kel Strother</span>
+           <br />
+           <br />
+           Kel lives in Denver, CO. He spends his time either poking keyboards
+           or seeing live music.
          </p>
        </div>
      </>

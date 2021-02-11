@@ -1,33 +1,70 @@
-.team-container {
-   margin-top: 5rem;
+.theTeam {
+   display: block;
    text-align: center;
-   display: flex;
-   justify-content: center;
+   margin: 5rem 0;
 }
 
-.member-container {
-   margin-top: 3rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.kaung-container {
+   display: grid;
+   grid-template-columns: 1fr 4fr;
 }
 
-.member-container h3 {
-   margin-top: 1rem;
-   text-align: center;
-}
-
-.member-container img {
-   margin-left: 2rem;
-   margin-top: 1rem;
+.img1 {
+   margin-left: 3rem;
+   margin-bottom: 4rem;
    width: 200px;
    height: 200px;
 }
 
-.member-container p {
-   display: inline-block;
-   max-width: 500px;
-   margin: 1rem 6rem ;
-   text-align: center;
+.kaung-name {
+   text-decoration: underline;
+   font-size: 2rem;
 }
+
+.about-kaung {
+   max-width: 500px;
+}
+
+.clay-container {
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+}
+
+.img2 {
+   margin-left: 3rem;
+   margin-bottom: 4rem;
+   width: 200px;
+   height: 200px;
+}
+
+.clay-name {
+   text-decoration: underline;
+   font-size: 2rem;
+}
+
+.about-clay {
+   max-width: 500px;
+}
+
+.kel-container {
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+}
+
+.img3 {
+   margin-left: 3rem;
+   margin-bottom: 4rem;
+   width: 200px;
+   height: 200px;
+}
+
+.kel-name {
+   text-decoration: underline;
+   font-size: 2rem;
+}
+
+.about-kel {
+   max-width: 500px;
+}
+
+

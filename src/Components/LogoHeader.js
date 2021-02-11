@@ -6,10 +6,10 @@ function LogoHeader() {
    return (
      <div className="home-container">
        <div className="logo-container">
-         <img className='gimme' src={Logo} alt=""/>
-         {/* <h1 className="title-text">
+         {/* <img className='gimme' src={Logo} alt=""/> */}
+         <h1 className="title-text">
            Gimme<span className="dot">.</span>it
-         </h1> */}
+         </h1>
        </div>
      </div>
    );
