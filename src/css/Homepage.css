@@ -1,9 +1,3 @@
-.gimme {
-  display: none;
-  width: 50vw;
-  height: 15vh;
-}
-
 .home-container {
   display: flex;
   justify-content: space-between;
@@ -20,10 +14,14 @@
 }
 
 .logo-container {
-  position: sticky;
+  background: rgb(107, 28, 235);
+  position: fixed;
+
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
   height: 20vh;
 }
 

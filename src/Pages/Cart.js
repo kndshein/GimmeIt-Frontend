@@ -4,6 +4,7 @@ import { Route, Switch, Link } from "react-router-dom";
 import Payment from "./Payment";
 import Confirmation from "./Confirmation";
 import axios from"axios"
+import '../css/Cart.css'
 
 const Cart = (props) => {
   const [paymentFormData, setPaymentFormData] = React.useState(null);
@@ -20,25 +21,24 @@ const Cart = (props) => {
 }
 
   return (
-    <div>
-      Cart
+    <div className='cart-container'>
+      <h1 className="cart-title">Cart</h1>
       {props.cartItems.map((item, index) => {
-          console.log(item);
-          return (
-            <div
-              className={"image-container"}
-              key={index}
-            >
-              <img className="image" src={item.img} alt="desk" />
-              <div className="image-text">
-                <h2 className="item-cardname">{item.name}</h2>
-              </div>
-              <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
+        console.log(item);
+        return (
+          <div className={"image-container"} key={index}>
+            <img className="image" src={item.img} alt="desk" />
+            <div className="image-text">
+              <h2 className="item-cardname">{item.name}</h2>
             </div>
-          );
-        })}
+            <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
+          </div>
+        );
+      })}
       <Link to="/cart/payment">
-        <div>Checkout</div>
+        <div className="checkout">
+          <h1 className="checkout-title">Checkout</h1>
+        </div>
       </Link>
       <Switch>
         <Route
@@ -56,7 +56,12 @@ const Cart = (props) => {
           exact
           path="/cart/confirmation"
           render={(rp) => (
-            <Confirmation {...rp} paymentFormData={paymentFormData} url={props.url} cartItems={props.cartItems}/>
+            <Confirmation
+              {...rp}
+              paymentFormData={paymentFormData}
+              url={props.url}
+              cartItems={props.cartItems}
+            />
           )}
         />
       </Switch>
