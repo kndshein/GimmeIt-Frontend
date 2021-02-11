@@ -5,6 +5,7 @@ import axios from "axios";
 import "./App.css";
 
 import Cart from "./Pages/Cart";
+import LogoHeader from './Components/LogoHeader'
 import Homepage from "./Pages/Homepage";
 import Nav from "./Components/Nav";
 import Navbar from "./Components/Navbar";
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <div className="App">
+      <LogoHeader />
       <Switch>
         <Route
           exact
@@ -62,7 +64,7 @@ function App() {
           path="/cart"
           render={(rp) => (
             <Router>
-              <Cart {...rp} />
+              <Cart {...rp} url={url}/>
             </Router>
           )}
         />
