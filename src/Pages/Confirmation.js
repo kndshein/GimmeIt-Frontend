@@ -4,6 +4,14 @@ import "../css/Payment.css";
 const Confirmation = (props) => {
   const handlePaymentConfirm = (event) => {
     // add PUT route to add shipping address in the API
+    for (let index = 0; index < props.cartItems.length; index++) {
+      fetch(props.url + "items/id" + props.cartItems[index]._id,{
+        body: {
+          shipping: JSON.stringify(props.paymentFormData)
+        }
+      })
+    }
+    
     props.history.replace("/cart");
   };
   return (

@@ -64,7 +64,7 @@ function App() {
           path="/cart"
           render={(rp) => (
             <Router>
-              <Cart {...rp} />
+              <Cart {...rp} url={url}/>
             </Router>
           )}
         />
