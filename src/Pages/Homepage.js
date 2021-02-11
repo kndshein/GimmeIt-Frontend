@@ -12,6 +12,7 @@ const Homepage = (props) => {
         setCartItems={props.setCartItems}
         cartItems={props.cartItems}
         url={props.url}
+        getAvailableItems={props.getAvailableItems}
       />
     </div>
   );

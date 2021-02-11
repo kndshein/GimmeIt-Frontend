@@ -7,7 +7,6 @@ import "./App.css";
 import Cart from "./Pages/Cart";
 import LogoHeader from './Components/LogoHeader'
 import Homepage from "./Pages/Homepage";
-import Nav from "./Components/Nav";
 import Navbar from "./Components/Navbar";
 import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
@@ -48,7 +47,7 @@ function App() {
         <Route
           exact
           path="/"
-          render={(rp) => <Homepage {...rp} listedItems={listedItems} setCartItems={setCartItems} cartItems={cartItems} url={url}/>}
+          render={(rp) => <Homepage {...rp} listedItems={listedItems} setCartItems={setCartItems} cartItems={cartItems} url={url} getAvailableItems={getAvailableItems}/>}
         />
         <Route
           exact

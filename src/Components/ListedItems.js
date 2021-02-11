@@ -5,6 +5,10 @@ import axios from "axios";
 const ListedItems = (props) => {
   const [toggleState, setToggleState] = React.useState(null);
 
+  React.useEffect(() => {
+    props.getAvailableItems();
+  }, [props.cartItems]);
+
   const loaded = () => {
     const handleAddCart = (item) => {
       props.setCartItems([...props.cartItems, item]);
@@ -25,27 +29,32 @@ const ListedItems = (props) => {
     return (
       <div className="image-container-container">
         {props.listedItems.data.map((item, index) => {
-          console.log(item);
-          return (
-            <div
-              className={`image-container${
-                toggleState?.active === index ? " active" : ""
-              }`}
-              onClick={() => handleClick(index)}
-              key={index}
-            >
-              <div className="card-container">
-                <img className="image" src={item.img} alt="desk" />
-                <div className="image-text">
-                  <h2 className="item-cardname">{item.name}</h2>
-                  <p className="item-description">{item.description}</p>
-                  <button onClick={() => handleAddCart(item)}>
-                    Add to Cart
-                  </button>
+          // console.log(item);
+          if (item.available) {
+            return (
+              <div
+                className={`image-container${
+                  toggleState?.active === index ? " active" : ""
+                }`}
+                onClick={() => handleClick(index)}
+                key={index}
+              >
+                <div className="card-container">
+                  <img className="image" src={item.img} alt="desk" />
+                  <div className="image-text">
+                    <h2 className="item-cardname">{item.name}</h2>
+                    <p className="item-description">{item.description}</p>
+                    <button onClick={() => handleAddCart(item)}>
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
+            );
+          } else {
+            console.log("item is unavailable");
+            return null;
+          }
         })}
       </div>
     );

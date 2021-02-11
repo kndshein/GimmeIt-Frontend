@@ -23,7 +23,7 @@ const Cart = (props) => {
     <div>
       Cart
       {props.cartItems.map((item, index) => {
-          console.log(item);
+          console.log("cart items - ", item);
           return (
             <div
               className={"image-container"}
