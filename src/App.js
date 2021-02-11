@@ -57,7 +57,11 @@ function App() {
         <Route
           exact
           path="/profile"
-          render={(rp) => <Profile {...rp} url={url} />}
+          render={(rp) => 
+            <Router>
+              <Profile {...rp} url={url} />
+            </Router>
+          }
         />
         <Route
           exact

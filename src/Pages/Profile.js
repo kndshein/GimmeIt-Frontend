@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch, Link , Router } from "react-router-dom";
 import '../css/Profile.css'
 
 import LoginForm from "../Components/LoginForm";
 import LoggedInProfile from "../Components/LoggedInProfile";
+import RegisterForm from "../Components/RegisterForm"
 
 const Profile = (props) => {
   console.log("profile props -", props);
@@ -34,6 +35,17 @@ const Profile = (props) => {
     props.history.push("/profile");
   };
 
+  const handleRegister = (registerInfo) => {
+    axios
+      .post(props.url + "donors/register",{
+        username: registerInfo.username[0],
+        firstName: registerInfo.firstName[0],
+        lastName: registerInfo.lastName[0],
+        password: registerInfo.password[0],
+        email: registerInfo.email[0]
+      })
+  }
+
   const loggedIn = () => {
     return (
       <div>
@@ -48,6 +60,19 @@ const Profile = (props) => {
       <div className="login-page">
         <h2 className="profile-title">Login to your account</h2>
         <LoginForm props={props} handleLogin={handleLogin} />
+        <RegisterForm handleRegister={handleRegister}/>
+        {/* <Link to="/profile/register">
+          <button>register</button>
+        </Link>
+        <Switch>
+          <Route
+            exact path="/profile/register"
+            render={(rp) => (
+                <Register
+                  {...rp}
+                />
+            )}/>
+        </Switch> */}
       </div>
     );
   };
