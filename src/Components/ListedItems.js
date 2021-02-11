@@ -1,21 +1,23 @@
 import React from "react";
 import "../css/Item.css";
-import axios from "axios"
+import axios from "axios";
 
 const ListedItems = (props) => {
   const [toggleState, setToggleState] = React.useState(null);
 
-  
+  React.useEffect(() => {
+    props.getAvailableItems();
+  }, [props.cartItems]);
 
   const loaded = () => {
     const handleAddCart = (item) => {
-        props.setCartItems([...props.cartItems, item])
-        console.log("cart items - ",props.cartItems)
-        //make item selected unavailable
-        axios.put(props.url + "items/id/" + item._id,{
-            available: false
-        })
-    }
+      props.setCartItems([...props.cartItems, item]);
+      console.log("cart items - ", props.cartItems);
+      //make item selected unavailable
+      axios.put(props.url + "items/id/" + item._id, {
+        available: false,
+      });
+    };
 
     const handleClick = (index) => {
       setToggleState({ active: index });
@@ -25,25 +27,34 @@ const ListedItems = (props) => {
     };
 
     return (
-      <div>
+      <div className="image-container-container">
         {props.listedItems.data.map((item, index) => {
-          console.log(item);
-          return (
-            <div
-              className={`image-container${
-                toggleState?.active === index ? " active" : ""
-              }`}
-              onClick={() => handleClick(index)}
-              key={index}
-            >
-              <img className="image" src={item.img} alt="desk" />
-              <div className="image-text">
-                <p className="item-description">{item.description}</p>
-                <h2 className="item-cardname">{item.name}</h2>
+          // console.log(item);
+          if (item.available) {
+            return (
+              <div
+                className={`image-container${
+                  toggleState?.active === index ? " active" : ""
+                }`}
+                onClick={() => handleClick(index)}
+                key={index}
+              >
+                <div className="card-container">
+                  <img className="image" src={item.img} alt="desk" />
+                  <div className="image-text">
+                    <h2 className="item-cardname">{item.name}</h2>
+                    <p className="item-description">{item.description}</p>
+                    <button onClick={() => handleAddCart(item)}>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
               </div>
-              <button onClick={() => handleAddCart(item)}>Add to Cart</button>
-            </div>
-          );
+            );
+          } else {
+            console.log("item is unavailable");
+            return null;
+          }
         })}
       </div>
     );

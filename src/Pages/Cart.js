@@ -21,26 +21,34 @@ const Cart = (props) => {
 }
 
   return (
-    <div className='cart-container'>
-      <h1 className="cart-title">Cart</h1>
-      {props.cartItems.map((item, index) => {
-        console.log(item);
-        return (
-          <div className={"image-container"} key={index}>
-            <img className="image" src={item.img} alt="desk" />
-            <div className="image-text">
-              <h2 className="item-cardname">{item.name}</h2>
-            </div>
-            <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
-          </div>
-        );
-      })}
-      <Link to="/cart/payment">
-        <div className="checkout">
-          <h1 className="checkout-title">Checkout</h1>
-        </div>
-      </Link>
+    <div>
+      Cart
       <Switch>
+        <Route
+          exact
+          path="/cart"
+          render={(rp) => (
+            <div>
+              {props.cartItems.map((item, index) => {
+                console.log("cart items - ", item);
+                return (
+                  <div className={"image-container"} key={index}>
+                    <img className="image" src={item.img} alt="desk" />
+                    <div className="image-text">
+                      <h2 className="item-cardname">{item.name}</h2>
+                    </div>
+                    <button onClick={() => handleRemoveFromCart(item)}>
+                      Remove
+                    </button>
+                  </div>
+                );
+              })}
+              <Link to="/cart/payment">
+                <div>Checkout</div>
+              </Link>
+            </div>
+          )}
+        />
         <Route
           exact
           path="/cart/payment"
@@ -61,6 +69,7 @@ const Cart = (props) => {
               paymentFormData={paymentFormData}
               url={props.url}
               cartItems={props.cartItems}
+              setCartItems={props.setCartItems}
             />
           )}
         />
@@ -68,5 +77,6 @@ const Cart = (props) => {
     </div>
   );
 };
+
 
 export default Cart;

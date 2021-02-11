@@ -5,18 +5,17 @@ import axios from "axios";
 import "./App.css";
 
 import Cart from "./Pages/Cart";
-import LogoHeader from './Components/LogoHeader'
+import LogoHeader from "./Components/LogoHeader";
 import Homepage from "./Pages/Homepage";
-import Nav from "./Components/Nav";
 import Navbar from "./Components/Navbar";
 import Post from "./Pages/Post";
 import Profile from "./Pages/Profile";
-import Team from './Pages/Team'
+import Team from "./Pages/Team";
 
 function App() {
   //URL variable
   const url = "http://localhost:4000/";
-  
+
   const [cartItems, setCartItems] = useState([]);
   const [listedItems, setListedItems] = useState(null);
 
@@ -44,38 +43,62 @@ function App() {
   return (
     <div className="App">
       <LogoHeader />
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={(rp) => <Homepage {...rp} listedItems={listedItems} setCartItems={setCartItems} cartItems={cartItems} url={url}/>}
-        />
-        <Route
-          exact
-          path="/post"
-          render={(rp) => <Post {...rp} handlePost={handlePost} />}
-        />
-        <Route
-          exact
-          path="/profile"
-          render={(rp) => <Profile {...rp} url={url} />}
-        />
-        <Route
-          exact
-          path="/cart"
-          render={(rp) => (
-            <Router>
-              <Cart {...rp} url={url} cartItems={cartItems} setCartItems={setCartItems}/>
-            </Router>
-          )}
-        />
-        <Route exact path="/team" render={(rp) => (
-          <Router>
-            <Team {...rp} url={url}/>
-          </Router>
-        )} />
-      </Switch>
       <Navbar />
+      <div className="App-body">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={(rp) => (
+              <Homepage
+                {...rp}
+                listedItems={listedItems}
+                setCartItems={setCartItems}
+                cartItems={cartItems}
+                url={url}
+                getAvailableItems={getAvailableItems}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/post"
+            render={(rp) => <Post {...rp} handlePost={handlePost} />}
+          />
+          <Route
+            exact
+            path="/profile"
+            render={(rp) => (
+              <Router>
+                <Profile {...rp} url={url} />
+              </Router>
+            )}
+          />
+          <Route
+            exact
+            path="/cart"
+            render={(rp) => (
+              <Router>
+                <Cart
+                  {...rp}
+                  url={url}
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              </Router>
+            )}
+          />
+          <Route
+            exact
+            path="/team"
+            render={(rp) => (
+              <Router>
+                <Team {...rp} url={url} />
+              </Router>
+            )}
+          />
+        </Switch>
+      </div>
     </div>
   );
 }
