@@ -47,7 +47,7 @@ function App() {
         <Route
           exact
           path="/"
-          render={(rp) => <Homepage {...rp} listedItems={listedItems} setCartItems={setCartItems} cartItems={cartItems}/>}
+          render={(rp) => <Homepage {...rp} listedItems={listedItems} setCartItems={setCartItems} cartItems={cartItems} url={url}/>}
         />
         <Route
           exact

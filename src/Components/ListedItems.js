@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Item.css";
+import axios from "axios"
 
 const ListedItems = (props) => {
   const [toggleState, setToggleState] = React.useState(null);
@@ -11,6 +12,9 @@ const ListedItems = (props) => {
         props.setCartItems([...props.cartItems, item])
         console.log("cart items - ",props.cartItems)
         //make item selected unavailable
+        axios.put(props.url + "items/id/" + item._id,{
+            available: false
+        })
     }
 
     const handleClick = (index) => {
