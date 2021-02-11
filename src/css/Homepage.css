@@ -1,26 +1,18 @@
-.gimme {
-  display: none;
-  width: 50vw;
-  height: 15vh;
-}
-
 .home-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  z-index: 100;
+  position: fixed;
+  display: block;
   color: #fff;
-  text-align: left;
-  height: 100%;
+  width: 100%;
   background: rgb(107, 28, 235);
 }
-.home-image-container{
+.home-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-container {
-  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;

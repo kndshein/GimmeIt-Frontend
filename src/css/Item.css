@@ -38,7 +38,7 @@
   display: none;
 }
 
-button {
+.card-container button {
   display: none;
   font-size: 1.2rem;
   border-radius: 5px;
