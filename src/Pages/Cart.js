@@ -3,7 +3,8 @@ import { Route, Switch, Link } from "react-router-dom";
 
 import Payment from "./Payment";
 import Confirmation from "./Confirmation";
-import axios from "axios";
+import axios from"axios"
+import '../css/Cart.css'
 
 const Cart = (props) => {
   const [paymentFormData, setPaymentFormData] = React.useState(null);
@@ -75,5 +76,6 @@ const Cart = (props) => {
     </div>
   );
 };
+
 
 export default Cart;
