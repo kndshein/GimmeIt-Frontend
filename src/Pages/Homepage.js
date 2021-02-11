@@ -7,7 +7,7 @@ import "../css/Nav.css";
 const Homepage = (props) => {
   return (
       <div className="home-image-container">
-        <ListedItems listedItems={props.listedItems} />
+        <ListedItems listedItems={props.listedItems} setCartItems={props.setCartItems} cartItems={props.cartItems} url={props.url}/>
       </div>
   );
 };

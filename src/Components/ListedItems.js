@@ -1,10 +1,22 @@
 import React from "react";
 import "../css/Item.css";
+import axios from "axios"
 
 const ListedItems = (props) => {
   const [toggleState, setToggleState] = React.useState(null);
 
+  
+
   const loaded = () => {
+    const handleAddCart = (item) => {
+        props.setCartItems([...props.cartItems, item])
+        console.log("cart items - ",props.cartItems)
+        //make item selected unavailable
+        axios.put(props.url + "items/id/" + item._id,{
+            available: false
+        })
+    }
+
     const handleClick = (index) => {
       setToggleState({ active: index });
       if (toggleState?.active === index) {
@@ -28,6 +40,7 @@ const ListedItems = (props) => {
               <div className="image-text">
                 <h2 className="item-cardname">{item.name}</h2>
               </div>
+              <button onClick={() => handleAddCart(item)}>Add to Cart</button>
             </div>
           );
         })}

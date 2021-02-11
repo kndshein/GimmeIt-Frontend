@@ -1,17 +1,23 @@
+import axios from "axios";
 import React from "react";
 import "../css/Payment.css";
 
 const Confirmation = (props) => {
   const handlePaymentConfirm = (event) => {
     // add PUT route to add shipping address in the API
+    console.log(props.paymentFormData)
     for (let index = 0; index < props.cartItems.length; index++) {
-      fetch(props.url + "items/id" + props.cartItems[index]._id,{
-        body: {
-          shipping: JSON.stringify(props.paymentFormData)
+      axios.put(props.url + "items/id/" + props.cartItems[index]._id,{
+        shipping: {
+          firstName: props.paymentFormData.firstName[0],
+          lastName: props.paymentFormData.lastName[0],
+          addressStreet: props.paymentFormData.addressStreet[0],
+          addressCity: props.paymentFormData.addressCity[0],
+          addressState: props.paymentFormData.addressState[0],
+          addressZipcode: props.paymentFormData.addressZipcode[0]
         }
       })
     }
-    
     props.history.replace("/cart");
   };
   return (
