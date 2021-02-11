@@ -1,5 +1,6 @@
 import React from "react"
 import '../css/Item.css'
+import Item from './Item'
 
 const ListedItems = (props) =>{
 
@@ -9,16 +10,7 @@ const ListedItems = (props) =>{
             {props.listedItems.data.map((item) =>{
                     console.log(item)
                     return(
-                        <div className="image-container">
-                        <img
-                          className="image"
-                          src={item.img}
-                          alt={item.name}
-                        />
-                        <div className="image-text">
-                          <h2 className="item-cardname">{item.name}</h2>
-                        </div>
-                      </div>
+                        <Item itemData={item}/>
                     )         
                 })}
         </div>
