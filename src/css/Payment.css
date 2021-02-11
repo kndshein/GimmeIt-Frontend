@@ -58,11 +58,21 @@
 
 /* CONFIRMATION STYLES */
 .confirm-container {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
   border: 2px solid #fff;
-  margin: 2rem 2rem;
+  border-radius: 10px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  width: 50%;
+  margin: 50% 25%;
+ 
 }
 
 .buyer-container {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   text-align: left;
