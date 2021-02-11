@@ -1,6 +1,8 @@
 import React from "react";
 import '../css/Profile.css'
 
+import axios from "axios"
+
 const RegisterForm = (props) => {
   console.log("registerForm props - ", props);
   // empty object for formData state
