@@ -56,7 +56,7 @@ const Cart = (props) => {
           exact
           path="/cart/confirmation"
           render={(rp) => (
-            <Confirmation {...rp} paymentFormData={paymentFormData} url={props.url} cartItems={props.cartItems}/>
+            <Confirmation {...rp} paymentFormData={paymentFormData} url={props.url} cartItems={props.cartItems} setCartItems={props.setCartItems}/>
           )}
         />
       </Switch>

@@ -17,6 +17,7 @@ const Confirmation = (props) => {
           addressZipcode: props.paymentFormData.addressZipcode[0]
         }
       })
+      props.setCartItems(props.cartItems.filter(item => item._id !== props.cartItems[index]._id))
     }
     props.history.replace("/cart");
   };

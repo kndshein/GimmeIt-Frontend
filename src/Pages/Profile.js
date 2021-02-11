@@ -59,20 +59,26 @@ const Profile = (props) => {
     return (
       <div className="login-page">
         <h2 className="profile-title">Login to your account</h2>
-        <LoginForm props={props} handleLogin={handleLogin} />
-        <RegisterForm handleRegister={handleRegister}/>
-        {/* <Link to="/profile/register">
+        
+        {/* <RegisterForm handleRegister={handleRegister}/> */}
+        <Link to="/profile/register">
           <button>register</button>
+        </Link>
+        <Link to="/profile/login">
+          <button>login</button>
         </Link>
         <Switch>
           <Route
+            exact path="/profile/login"
+            render={(rp) => (
+              <LoginForm props={props} handleLogin={handleLogin} />
+            )}/>
+          <Route
             exact path="/profile/register"
             render={(rp) => (
-                <Register
-                  {...rp}
-                />
+              <RegisterForm handleRegister={handleRegister}/>
             )}/>
-        </Switch> */}
+        </Switch>
       </div>
     );
   };
