@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Item from "../Components/Item";
 import ListedItems from "../Components/ListedItems";
 import Nav from "../Components/Nav";
 import "../css/Homepage.css";
@@ -16,9 +15,8 @@ const Homepage = (props) => {
         </div>
         {/* <Nav/> */}
       </div>
-      <div className="image-container">
+      <div className="home-image-container">
         <ListedItems listedItems={props.listedItems} />
-        {/* <Item/> */}
       </div>
     </>
   );

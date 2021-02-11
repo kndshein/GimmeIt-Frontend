@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/Payment.css'
+import "../css/Payment.css";
 
 const Confirmation = (props) => {
   const handlePaymentConfirm = (event) => {
