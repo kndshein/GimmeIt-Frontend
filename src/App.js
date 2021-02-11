@@ -65,13 +65,13 @@ function App() {
           path="/cart"
           render={(rp) => (
             <Router>
-              <Cart {...rp} url={url} cartItems={cartItems}/>
+              <Cart {...rp} url={url} cartItems={cartItems} setCartItems={setCartItems}/>
             </Router>
           )}
         />
         <Route exact path="/team" render={(rp) => (
           <Router>
-            <Team P{...rp} url={url}/>
+            <Team {...rp} url={url}/>
           </Router>
         )} />
       </Switch>
