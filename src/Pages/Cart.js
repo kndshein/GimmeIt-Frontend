@@ -6,6 +6,7 @@ import Confirmation from "./Confirmation";
 
 const Cart = (props) => {
   const [paymentFormData, setPaymentFormData] = React.useState(null);
+  
 
   return (
     <div>
@@ -29,7 +30,7 @@ const Cart = (props) => {
           exact
           path="/cart/confirmation"
           render={(rp) => (
-            <Confirmation {...rp} paymentFormData={paymentFormData} url={props.url} />
+            <Confirmation {...rp} paymentFormData={paymentFormData} url={props.url} cartItems={props.cartItems}/>
           )}
         />
       </Switch>

@@ -15,7 +15,7 @@ function App() {
   //URL variable
   const url = "http://localhost:4000/";
   
-
+  const [cartItems, setCartItems] = useState([]);
   const [listedItems, setListedItems] = useState(null);
 
   const getAvailableItems = (item) => {
@@ -45,7 +45,7 @@ function App() {
         <Route
           exact
           path="/"
-          render={(rp) => <Homepage {...rp} listedItems={listedItems} />}
+          render={(rp) => <Homepage {...rp} listedItems={listedItems} setCartItems={setCartItems} cartItems={cartItems}/>}
         />
         <Route
           exact
@@ -62,7 +62,7 @@ function App() {
           path="/cart"
           render={(rp) => (
             <Router>
-              <Cart {...rp} url={url}/>
+              <Cart {...rp} url={url} cartItems={cartItems}/>
             </Router>
           )}
         />

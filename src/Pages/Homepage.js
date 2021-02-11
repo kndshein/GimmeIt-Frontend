@@ -16,7 +16,7 @@ const Homepage = (props) => {
         {/* <Nav/> */}
       </div>
       <div className="home-image-container">
-        <ListedItems listedItems={props.listedItems} />
+        <ListedItems listedItems={props.listedItems} setCartItems={props.setCartItems} cartItems={props.cartItems}/>
       </div>
     </>
   );
