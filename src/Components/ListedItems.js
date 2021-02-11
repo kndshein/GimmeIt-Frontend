@@ -38,6 +38,7 @@ const ListedItems = (props) => {
             >
               <img className="image" src={item.img} alt="desk" />
               <div className="image-text">
+                <p className="item-description">{item.description}</p>
                 <h2 className="item-cardname">{item.name}</h2>
               </div>
               <button onClick={() => handleAddCart(item)}>Add to Cart</button>

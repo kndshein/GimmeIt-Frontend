@@ -4,11 +4,11 @@ import '../css/Team.css'
 function Team() {
    return (
      <>
-         <h1 className="theTeam">The Team</h1>
+       <h1 className="theTeam">The Team</h1>
        <div className="kaung-container">
          <img
-           src="https://media-exp1.licdn.com/dms/image/C5603AQHknIJvCodDZQ/profile-displayphoto-shrink_800_800/0/1551910400554?e=1618444800&v=beta&t=Fg0SrO8HEsnzelGXR1_LSZx7uN6sl-a7ax9QHC4q8Tk"
-           alt=""
+           src="https://cdn.discordapp.com/attachments/806696089243615275/809503418846281738/IMG_0511-Edit.jpeg"
+           alt="Kaung Shein"
            className="img1"
          />
          <p className="about-kaung">
@@ -20,8 +20,8 @@ function Team() {
        </div>
        <div className="clay-container">
          <img
-           src="https://media-exp1.licdn.com/dms/image/C5603AQEdDE-3lsvejA/profile-displayphoto-shrink_800_800/0/1519092414968?e=1618444800&v=beta&t=e-8-405I1JqIr34Tm5nX9jgHkUiLGukL9zIzK6lHoQs"
-           alt=""
+           src="https://media.discordapp.net/attachments/286649548997132289/809489368603295815/36570780_1896191790444830_5075000122220216320_n.jpg?width=343&height=343"
+           alt="Clayton Miller"
            className="img2"
          />
          <p className="about-clay">
@@ -31,7 +31,7 @@ function Team() {
          </p>
        </div>
        <div className="kel-container">
-         <img src="https://i.imgur.com/UWmDpTT.jpg" alt="" className="img3" />
+         <img src="https://i.imgur.com/UWmDpTT.jpg" alt="Kel Strother" className="img3" />
 
          <p className="about-kel">
            <span className="kel-name">Kel Strother</span>
