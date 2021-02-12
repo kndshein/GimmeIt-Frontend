@@ -19,10 +19,10 @@ const LoggedInProfile = (props) => {
   return (
     <div>
       <div className="profile-info">
-        <h2>First Name: {profile?.firstName}</h2>
-        <h2>Last Name: {profile?.lastName}</h2>
-        <h2>Username: {profile?.username}</h2>
-        <h2>Email: {profile?.email}</h2>
+        {/* <h2>First Name: {profile?.firstName}</h2>
+        <h2>Last Name: {profile?.lastName}</h2> */}
+        <h2>{profile?.username}</h2>
+        <h3>Email: {profile?.email}</h3>
       </div>
       <h2 className="listed-items-container">
         <div className="selling-items-container">
@@ -31,7 +31,7 @@ const LoggedInProfile = (props) => {
             if (item.available)
               return (
                 <div className="card-container">
-                  <img className="image" src={item.img} alt="none" />
+                  <img className="image" src={item.img} alt={item.name} />
                   <div className="image-text">
                     <p className="item-cardname">{item.name}</p>
                     <p className="item-description">{item.description}</p>
