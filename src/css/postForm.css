@@ -5,15 +5,14 @@
 }
 
 .PostForm {
-  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .form-post {
-  width: 60vw;
-  margin-top: 8rem;
+  max-width: 60vw;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,27 +20,27 @@
 }
 
 .form-post input {
-  max-width: 500px;
-  padding: .6rem;
+  max-width: 400px;
+  padding: 0.6rem;
   width: 60vw;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .input-description {
-  height: 2rem;
+  height: 3rem;
 }
 
 .btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  gap: 10px;
 }
 
 .btn-container input {
   width: 90%;
   /* height: 40px; */
-  margin: 0 1rem;
   max-width: 100px;
 }
 

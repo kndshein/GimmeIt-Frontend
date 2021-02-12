@@ -40,6 +40,7 @@
 
 .mobile-menu-btn {
   position: fixed;
+  z-index: 50;
   bottom: 30px;
   right: 20px;
   width: 60px;
@@ -51,10 +52,10 @@
     background: rgb(88, 24, 190);
     position: fixed;
     border-radius: 0;
-    top: 15vh;
+    top: 100px;
     right: 0;
     width: 100vw;
-    height: 5vh;
+    height: 40px;
   }
 
   .nav-items {
@@ -66,6 +67,7 @@
   }
 
   .nav-items a {
+    font-size: 1.5rem;
     margin-top: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -73,6 +75,7 @@
 
   .nav-items a:hover {
     color: gold;
+    font-size: 1.6rem;
   }
 
   .mobile-menu-btn {

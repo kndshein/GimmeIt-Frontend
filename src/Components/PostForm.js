@@ -1,6 +1,5 @@
 import React from "react";
-import '../css/postForm.css'
-
+import "../css/postForm.css";
 
 function PostForm(props) {
   const emptyItem = {
@@ -10,11 +9,12 @@ function PostForm(props) {
     shipping: "",
   };
 
-  const [formData, setFormData] = React.useState(emptyItem)
+  const [formData, setFormData] = React.useState(emptyItem);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     props.handlePost(formData);
+    props.props.history.push("/");
   };
 
   const handleChange = (event) => {

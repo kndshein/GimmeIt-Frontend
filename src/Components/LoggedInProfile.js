@@ -18,11 +18,26 @@ const LoggedInProfile = (props) => {
 
   return (
     <div>
-      LoggedInProfile
       <div>{profile?.firstName}</div>
       <div>{profile?.lastName}</div>
       <div>{profile?.username}</div>
       <div>{profile?.email}</div>
+      <div className="listed-items-container">
+        {profile?.items.map((item, index) => {
+          return (
+            <div className="card-container">
+              <img className="image" src={item.img} alt="desk" />
+              <div className="image-text">
+                <h2 className="item-cardname">{item.name}</h2>
+                <p className="item-description">{item.description}</p>
+                <p>
+                  <span>Available?</span> {item.available.toString()}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
       <button onClick={() => props.handleLogout()}>Log Out</button>
     </div>
   );

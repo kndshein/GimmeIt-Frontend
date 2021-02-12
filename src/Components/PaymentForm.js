@@ -77,7 +77,7 @@ const PaymentForm = (props) => {
           required
           value={formData.addressState}
           onChange={handleChange}
-        />
+        /> 
         <input
           className="zip-payment"
           type="text"

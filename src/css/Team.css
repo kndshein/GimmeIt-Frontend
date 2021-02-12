@@ -1,70 +1,94 @@
 .theTeam {
-   display: block;
-   text-align: center;
-   margin: 5rem 0;
+  display: block;
+  text-align: center;
+  margin: 3rem 0;
 }
 
 .kaung-container {
-   display: grid;
-   grid-template-columns: 1fr 4fr;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
-.img1 {
-   margin-left: 3rem;
-   margin-bottom: 4rem;
-   width: 200px;
-   height: 200px;
+.team-image {
+  display: flex;
+  position: relative;
+  margin-left: 3rem;
+  margin-bottom: 4rem;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center;
+  justify-content: center;
+}
+
+.team-image img {
+  position: absolute;
+  width: 120%;
+  overflow: hidden;
+}
+
+.kel-image img {
+  width: 200%;
 }
 
 .kaung-name {
-   text-decoration: underline;
-   font-size: 2rem;
+  text-decoration: underline;
+  font-size: 2rem;
 }
 
 .about-kaung {
-   max-width: 500px;
+  font-size: 1.3rem;
+  margin-right: 1.5rem;
+  max-width: 400px;
 }
 
 .clay-container {
-   display: grid;
-   grid-template-columns: 1fr 4fr;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .img2 {
-   margin-left: 3rem;
-   margin-bottom: 4rem;
-   width: 200px;
-   height: 200px;
+  margin-left: 3rem;
+  margin-bottom: 4rem;
+  width: 250px;
+  height: 250px;
 }
 
 .clay-name {
-   text-decoration: underline;
-   font-size: 2rem;
+  text-decoration: underline;
+  font-size: 2rem;
 }
 
 .about-clay {
-   max-width: 500px;
+  font-size: 1.3rem;
+  margin-right: 1.5rem;
+  max-width: 400px;
 }
 
 .kel-container {
-   display: grid;
-   grid-template-columns: 1fr 4fr;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .img3 {
-   margin-left: 3rem;
-   margin-bottom: 4rem;
-   width: 200px;
-   height: 200px;
+  margin-left: 3rem;
+  margin-bottom: 4rem;
+  width: 300px;
+  height: 250px;
 }
 
 .kel-name {
-   text-decoration: underline;
-   font-size: 2rem;
+  text-decoration: underline;
+  font-size: 2rem;
 }
 
 .about-kel {
-   max-width: 500px;
+  font-size: 1.3rem;
+  margin-right: 1.5rem;
+  max-width: 400px;
 }
 
-
+.dream {
+  font-style: italic;
+}

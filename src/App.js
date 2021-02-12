@@ -25,7 +25,7 @@ function App() {
     });
   };
 
-  const handlePost = (postInfo) => {
+  const handlePost = (postInfo, rp) => {
     axios.get(url + "donors/item/create/", {
       headers: { "auth-token": sessionStorage.getItem("token") },
       params: {
