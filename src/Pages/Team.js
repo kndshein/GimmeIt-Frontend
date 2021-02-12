@@ -12,7 +12,7 @@ function Team() {
             alt="Kaung Shein"
           />
         </div>
-        <p className="about-kaung">
+        <div className="about-kaung">
           <span className="kaung-name">Kaung Shein</span>
           <br />
           <br />
@@ -20,7 +20,7 @@ function Team() {
           <br />
           <br />
           <h5>Kaung resides in New York. Simply chasing his American Dream.</h5>
-        </p>
+        </div>
       </div>
       <div className="clay-container">
         <div className="team-image">
@@ -29,30 +29,35 @@ function Team() {
             alt="Clayton Miller"
           />
         </div>
-        <p className="about-clay">
+        <div className="about-clay">
           <span className="clay-name">Clayton Miller</span>
           <br />
-          <br /> 
+          <br />
           <h4>Backend Engineer and Fullstack Assistant</h4>
           <br />
-          <br /> 
-          <h5>Clayton lives in Illinois and enjoys painting Warhammer models and playing World of Warcaft.</h5>
-        </p>
+          <br />
+          <h5>
+            Clayton lives in Illinois and enjoys painting Warhammer models and
+            playing World of Warcaft.
+          </h5>
+        </div>
       </div>
       <div className="kel-container">
         <div className="team-image kel-image">
           <img src="https://i.imgur.com/UWmDpTT.jpg" alt="Kel Strother" />
         </div>
-        <p className="about-kel">
+        <div className="about-kel">
           <span className="kel-name">Kel Strother</span>
           <br />
           <br />
           <h4>Frontend CSS Specialist</h4>
           <br />
           <br />
-          <h5>Kel lives in Denver, CO. He spends his time either poking keyboards or
-          seeing live music.</h5>
-        </p>
+          <h5>
+            Kel lives in Denver, CO. He spends his time either poking keyboards
+            or seeing live music.
+          </h5>
+        </div>
       </div>
     </>
   );

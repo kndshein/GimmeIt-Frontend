@@ -97,7 +97,9 @@
     margin: 0;
   }
 
-  .about-kaung {
+  .about-kaung,
+  .about-clay,
+  .about-kel {
     margin: 0;
     margin-top: 20px;
   }
