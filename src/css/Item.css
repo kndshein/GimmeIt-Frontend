@@ -77,8 +77,10 @@
   display: block;
 }
 
-/* @media (min-width: 900px) {
-  .image {
-    width: 50vw;
+@media (min-width: 900px) {
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-} */
+}
