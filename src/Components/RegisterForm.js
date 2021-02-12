@@ -1,7 +1,7 @@
 import React from "react";
-import '../css/Profile.css'
+import "../css/Profile.css";
 
-import axios from "axios"
+import axios from "axios";
 
 const RegisterForm = (props) => {
   console.log("registerForm props - ", props);
@@ -11,7 +11,7 @@ const RegisterForm = (props) => {
     password: "",
     firstName: "",
     lastName: "",
-    email: ""
+    email: "",
   };
 
   // if paymentFormData from Cart.js has information, show that. if not, have the form be empty
@@ -78,7 +78,7 @@ const RegisterForm = (props) => {
           value={formData.email}
           onChange={handleChange}
         />
-        <input className="register-btn" type="submit" value='Register'/>
+        <input className="register-btn" type="submit" value="Register" />
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Kranky&family=Mouse+Memoirs&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kranky&family=Mouse+Memoirs&display=swap");
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 
 html {
   font-family: "Archivo", sans-serif;
-  background: rgb(83, 83, 83);
+  background: rgb(240, 0, 0);
   background: linear-gradient(
     180deg,
     rgba(43, 43, 43, 1) 0%,
