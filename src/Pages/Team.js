@@ -16,7 +16,10 @@ function Team() {
           <span className="kaung-name">Kaung Shein</span>
           <br />
           <br />
-          Simply chasing his American Dream.
+          <h4>Fullstack Developer</h4>
+          <br />
+          <br />
+          <h5>Kaung resides in New York. Simply chasing his American Dream.</h5>
         </p>
       </div>
       <div className="clay-container">
@@ -29,7 +32,11 @@ function Team() {
         <p className="about-clay">
           <span className="clay-name">Clayton Miller</span>
           <br />
-          <br /> Meet Clayton. He lives in Illinois.
+          <br /> 
+          <h4>Backend Engineer and Fullstack Assistant</h4>
+          <br />
+          <br /> 
+          <h5>Clayton lives in Illinois and enjoys painting Warhammer models and playing World of Warcaft.</h5>
         </p>
       </div>
       <div className="kel-container">
@@ -40,8 +47,11 @@ function Team() {
           <span className="kel-name">Kel Strother</span>
           <br />
           <br />
-          Kel lives in Denver, CO. He spends his time either poking keyboards or
-          seeing live music.
+          <h4>Frontend CSS Specialist</h4>
+          <br />
+          <br />
+          <h5>Kel lives in Denver, CO. He spends his time either poking keyboards or
+          seeing live music.</h5>
         </p>
       </div>
     </>
