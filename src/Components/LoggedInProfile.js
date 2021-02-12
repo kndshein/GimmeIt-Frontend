@@ -50,6 +50,14 @@ const LoggedInProfile = (props) => {
                     <h2 className="item-cardname">{item.name}</h2>
                     <p className="item-description">{item.description}</p>
                     <p>{item.available.toString()}</p>
+                    <div>
+                      <p>{item.shipping[0].firstName}</p>
+                      <p>{item.shipping[0].lastName}</p>
+                      <p>{item.shipping[0].addressStreet}</p>
+                      <p>{item.shipping[0].addressCity}</p>
+                      <p>{item.shipping[0].addressState}</p>
+                      <p>{item.shipping[0].addressZipcode}</p>
+                    </div>
                   </div>
                 </div>
               );
