@@ -14,7 +14,7 @@ import Team from "./Pages/Team";
 
 function App() {
   //URL variable
-  const url = "http://localhost:4000/";
+  const url = "https://giveaway-kck.herokuapp.com/";
 
   const [cartItems, setCartItems] = useState([]);
   const [listedItems, setListedItems] = useState(null);
