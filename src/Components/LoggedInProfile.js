@@ -17,16 +17,17 @@ const LoggedInProfile = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className='profile-container'>
       <div className="profile-info">
-        {/* <h2>First Name: {profile?.firstName}</h2>
-        <h2>Last Name: {profile?.lastName}</h2> */}
-        <h2>{profile?.username}</h2>
-        <h3>Email: {profile?.email}</h3>
+        <h2 className='u-name'>{profile?.username}</h2>
+        <h3 className='e-mail'>
+          <span>Email: </span>
+          {profile?.email}
+        </h3>
       </div>
       <h2 className="listed-items-container">
         <div className="selling-items-container">
-          Selling
+          <p className="selling">Selling</p>
           {profile?.items.map((item, index) => {
             if (item.available)
               return (
@@ -35,23 +36,21 @@ const LoggedInProfile = (props) => {
                   <div className="image-text">
                     <p className="item-cardname">{item.name}</p>
                     <p className="item-description">{item.description}</p>
-                    <p>{item.available.toString()}</p>
                   </div>
                 </div>
               );
           })}
         </div>
         <div className="sold-items-container">
-          Sold
+          <p className="sold">Sold</p>
           {profile?.items.map((item, index) => {
             if (item.shipping[0])
               return (
                 <div className="card-container">
-                  <img className="image" src={item.img} alt="desk" />
+                  <img className="image" src={item.img} alt={item.name} />
                   <div className="image-text">
                     <h2 className="item-cardname">{item.name}</h2>
                     <p className="item-description">{item.description}</p>
-                    <p>{item.available.toString()}</p>
                     <div>
                       <p>{item.shipping[0]?.firstName}</p>
                       <p>{item.shipping[0]?.lastName}</p>
@@ -66,7 +65,7 @@ const LoggedInProfile = (props) => {
           })}
         </div>
       </h2>
-      <button onClick={() => props.handleLogout()}>Log Out</button>
+      <button className='logout-btn' onClick={() => props.handleLogout()}>Log Out</button>
     </div>
   );
 };

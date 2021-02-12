@@ -3,6 +3,13 @@
    margin-top: 3rem;
 }
 
+.profile-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+}
+
 .register-title {
    display: block;
    margin-bottom: 4rem;
@@ -102,13 +109,35 @@
    border: none;
 }
 
+.profile-info {
+   display: flex;
+   justify-content: flex-start;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.u-name {
+   font-size: 2rem;
+   text-align: center;
+   color: gold;
+   margin-bottom: 1rem;
+}
+
+.e-mail {
+   text-align: center;
+}
+
 .selling-items-container {
+   display: flex;
+   flex-direction: column;
    text-align: center;
    min-height: 40vh;
    max-height: 70vh;
    overflow: scroll;
    border: 1px solid white;
-   width: 20vw;
+   min-width: 30vw;
  }
 
  .selling {
@@ -121,14 +150,21 @@
     border-bottom: 2px solid #fff;
  }
 
-  
  .sold-items-container{
    text-align: center;
    min-height: 40vh;
    max-height: 70vh;
    overflow: scroll;
    border: 1px solid white;
-   width: 20vw;
+   min-width: 30vw;
+ }
+
+ .card-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+    margin-top: 2rem;
  }
 
  .profile-info {
@@ -137,7 +173,6 @@
     flex-direction: column;
     margin-bottom: 2rem;
     margin-left: 5rem;
-    text-align: left;
  }
   
  @media only screen and (min-width: 420px) {
