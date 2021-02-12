@@ -23,20 +23,38 @@ const LoggedInProfile = (props) => {
       <div>{profile?.username}</div>
       <div>{profile?.email}</div>
       <div className="listed-items-container">
-        {profile?.items.map((item, index) => {
-          return (
-            <div className="card-container">
-              <img className="image" src={item.img} alt="desk" />
-              <div className="image-text">
-                <h2 className="item-cardname">{item.name}</h2>
-                <p className="item-description">{item.description}</p>
-                <p>
-                  <span>Available?</span> {item.available.toString()}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+        <div className="selling-items-container">
+          Selling
+          {profile?.items.map((item, index) => {
+            if (item.available)
+              return (
+                <div className="card-container">
+                  <img className="image" src={item.img} alt="desk" />
+                  <div className="image-text">
+                    <h2 className="item-cardname">{item.name}</h2>
+                    <p className="item-description">{item.description}</p>
+                    <p>{item.available.toString()}</p>
+                  </div>
+                </div>
+              );
+          })}
+        </div>
+        <div className="sold-items-container">
+          Sold
+          {profile?.items.map((item, index) => {
+            if (!item.available)
+              return (
+                <div className="card-container">
+                  <img className="image" src={item.img} alt="desk" />
+                  <div className="image-text">
+                    <h2 className="item-cardname">{item.name}</h2>
+                    <p className="item-description">{item.description}</p>
+                    <p>{item.available.toString()}</p>
+                  </div>
+                </div>
+              );
+          })}
+        </div>
       </div>
       <button onClick={() => props.handleLogout()}>Log Out</button>
     </div>
