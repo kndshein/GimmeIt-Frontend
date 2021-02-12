@@ -17,10 +17,10 @@ const LoggedInProfile = (props) => {
   }, []);
 
   return (
-    <div className='profile-container'>
+    <div className="profile-container">
       <div className="profile-info">
-        <h2 className='u-name'>{profile?.username}</h2>
-        <h3 className='e-mail'>
+        <h2 className="u-name">{profile?.username}</h2>
+        <h3 className="e-mail">
           <span>Email: </span>
           {profile?.email}
         </h3>
@@ -44,7 +44,7 @@ const LoggedInProfile = (props) => {
         <div className="sold-items-container">
           <p className="sold">Sold</p>
           {profile?.items.map((item, index) => {
-            if (item.shipping[0])
+            if (item?.shipping[0])
               return (
                 <div className="card-container">
                   <img className="image" src={item.img} alt={item.name} />
@@ -65,7 +65,9 @@ const LoggedInProfile = (props) => {
           })}
         </div>
       </h2>
-      <button className='logout-btn' onClick={() => props.handleLogout()}>Log Out</button>
+      <button className="logout-btn" onClick={() => props.handleLogout()}>
+        Log Out
+      </button>
     </div>
   );
 };
