@@ -32,18 +32,23 @@ const Cart = (props) => {
                 console.log("cart items - ", item);
                 return (
                   <div className={"image-container"} key={index}>
-                    <img className="image" src={item.img} alt="desk" />
+                    <img className="image" src={item.img} alt={item.name} />
                     <div className="image-text">
                       <h2 className="item-cardname">{item.name}</h2>
                     </div>
-                    <button onClick={() => handleRemoveFromCart(item)}>
+                    <button
+                      className="remove-btn"
+                      onClick={() => handleRemoveFromCart(item)}
+                    >
                       Remove
                     </button>
                   </div>
                 );
               })}
               <Link to="/cart/payment">
-                <div className="checkout-title">Checkout</div>
+                <div className="checkout-title">
+                  Checkout
+                </div>
               </Link>
             </div>
           )}

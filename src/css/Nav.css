@@ -38,6 +38,10 @@
   text-decoration: none;
 }
 
+.nav-items a:hover {
+  color: gold;
+}
+
 .mobile-menu-btn {
   position: fixed;
   z-index: 50;
@@ -75,7 +79,6 @@
 
   .nav-items a:hover {
     color: gold;
-    font-size: 1.6rem;
   }
 
   .mobile-menu-btn {

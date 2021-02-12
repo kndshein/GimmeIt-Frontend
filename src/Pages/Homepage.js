@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ListedItems from "../Components/ListedItems";
-import Nav from "../Components/Nav";
 import "../css/Homepage.css";
 import '../css/Item.css'
 import "../css/Nav.css";

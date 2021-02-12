@@ -44,16 +44,37 @@
   max-width: 100px;
 }
 
-/* .btn-submit {
-  display: block;
-  margin-right: 1rem;
-  max-width: 100px;
-  padding: .6rem;
+.btn-submit {
+   font-size: 1.3rem;
+   border-radius: 5px;
+   cursor: pointer;
+   border: none;
+   margin-top: 2rem;
+   padding: .5rem;
+   width: 5rem;
+   margin-bottom: 5rem;
+   color: #fff;
+   background: rgba(107, 28, 238, .5);
+}
+
+.btn-submit:hover {
+   background: rgba(91, 31, 187, 0.5);
 }
 
 .btn-cancel {
-  padding: .6rem;
-  margin-left: 1rem;
-  max-width: 100px;
-  width: 15vw;
-} */
+   font-size: 1.3rem;
+   border-radius: 5px;
+   cursor: pointer;
+   border: none;
+   margin-top: 2rem;
+   padding: .5rem;
+   width: 5rem;
+   margin-bottom: 5rem;
+   color: #fff;
+   background: rgba(107, 28, 238, .5);
+}
+
+.btn-cancel:hover {
+   background: rgba(91, 31, 187, 0.5);
+}
+

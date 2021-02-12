@@ -57,9 +57,6 @@ const Profile = (props) => {
     return (
       <div className="login-page">
         <h2 className="profile-title">Login to your account</h2>
-
-        {/* <RegisterForm handleRegister={handleRegister}/> */}
-
         <Link to="/profile/login">
           <button className="login-btn">Login</button>
         </Link>

@@ -9,9 +9,31 @@
    margin-top: 4rem;
    font-size: 1.4rem;
    text-decoration: none;
+   text-align: center;
    color: #fff;
-   border: 2px solid rgba(107, 28, 238, 1);
+   border: none;
    background: rgba(107, 28, 238, .5);
    padding: .6rem;
    border-radius: 5px;
+   cursor: pointer;
+}
+
+.checkout-title:hover {
+   background: rgba(91, 31, 187, 0.5);
+}
+
+.remove-btn {
+   cursor: pointer;
+   padding: .3rem;
+   border-radius: 5px;
+   border: 2px solid rgb(187, 57, 57);
+   color: rgb(187, 57, 57);
+   font-size: 1.2rem;
+   background: rgba(27, 22, 23, 0.5);
+   margin-right: 2rem;
+}
+
+.remove-btn:hover {
+   border: 2px solid rgb(236, 71, 71);
+   color: rgb(236, 71, 71);
 }
