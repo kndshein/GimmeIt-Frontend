@@ -1,5 +1,4 @@
 .cart-container {
-   margin-top: 28rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -7,11 +6,12 @@
 }
 
 .checkout-title {
-   margin-top: 50rem;
+   margin-top: 4rem;
+   font-size: 1.4rem;
    text-decoration: none;
    color: #fff;
    border: 2px solid rgba(107, 28, 238, 1);
    background: rgba(107, 28, 238, .5);
-   padding: .5rem;
+   padding: .6rem;
    border-radius: 5px;
 }
