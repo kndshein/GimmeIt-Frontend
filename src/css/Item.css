@@ -1,6 +1,8 @@
 .image-container-container {
   display: flex;
   flex-flow: column;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
 
 .image-container {
