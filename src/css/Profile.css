@@ -68,7 +68,24 @@
    margin-bottom: 5rem;
 }
 
-.listed-items-container {
-   display: flex;
-   justify-content: center;
-}
+.selling-items-container {
+   min-height: 40vh;
+   max-height: 70vh;
+   overflow: scroll;
+   border: 1px solid white;
+ }
+  
+ .sold-items-container{
+   min-height: 40vh;
+   max-height: 70vh;
+   overflow: scroll;
+   border: 1px solid white;
+ }
+  
+ @media only screen and (min-width: 420px) {
+   .listed-items-container {
+      display: flex;
+      justify-content: center;
+   } 
+ }
+ 

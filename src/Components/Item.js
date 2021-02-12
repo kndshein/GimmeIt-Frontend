@@ -7,7 +7,7 @@ const Item = (props) => {
       <img
         className="image"
         src= {props.itemData.img}
-        alt="desk"
+        alt="none"
       />
       <div className="image-text" >
         <h2 className="item-cardname">{props.itemData.name}</h2>
