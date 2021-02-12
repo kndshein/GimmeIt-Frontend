@@ -23,13 +23,6 @@ const LoggedInProfile = (props) => {
       <div>{profile?.lastName}</div>
       <div>{profile?.username}</div>
       <div>{profile?.email}</div>
-      {/* <div>{profile?.items.map(item => {
-        return (
-          <h1>item name: {item.name}</h1>
-
-        )
-      })}
-      </div>*/}
       <div className="listed-items-container">
         {profile?.items.map((item, index) => {
           return (
