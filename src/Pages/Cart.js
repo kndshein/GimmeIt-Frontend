@@ -20,8 +20,8 @@ const Cart = (props) => {
   };
 
   return (
-    <div>
-      Cart
+    <div className='cart-container'>
+      <h1 className="cart-title">Cart</h1>
       <Switch>
         <Route
           exact
@@ -43,7 +43,7 @@ const Cart = (props) => {
                 );
               })}
               <Link to="/cart/payment">
-                <div>Checkout</div>
+                <div className='checkout-title'>Checkout</div>
               </Link>
             </div>
           )}
