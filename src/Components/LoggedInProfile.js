@@ -44,7 +44,7 @@ const LoggedInProfile = (props) => {
         <div className="sold-items-container">
           <p className="sold">Sold</p>
           {profile?.items.map((item, index) => {
-            if (item.shipping !== undefined && item.shipping[0])
+            if (item.shipping[0])
               return (
                 <div className="card-container">
                   <img className="image" src={item.img} alt={item.name} />
