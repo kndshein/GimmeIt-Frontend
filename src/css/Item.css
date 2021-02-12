@@ -1,11 +1,16 @@
+.image-container-container {
+  display: flex;
+  flex-flow: column;
+}
+
 .image-container {
-  align-self: center;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
   transition: all 0.5s ease;
+  min-height: 200px;
 }
 
 .card-container {
@@ -29,13 +34,14 @@
 .image-text {
   display: flex;
   flex-flow: column;
-  bottom: 0.3rem;
-  height: 4rem;
-  left: 1rem;
+  margin-top: 20px;
 }
 
 .item-description {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: all 0.3s ease;
 }
 
 .card-container button {
@@ -48,16 +54,9 @@
   color: #e0e0e0;
 }
 
-.image-container.active {
-  background-color: black;
-  display: flex;
-  position: absolute;
-  justify-content: none;
-  top: 25%;
-  height: 75%;
-  margin: 0 auto;
-  z-index: 10;
-}
+/* .image-container.active {
+  min-height: 500px;
+} */
 
 .image-container.active .image {
   mask-image: none;
@@ -68,19 +67,26 @@
 }
 
 .image-container.active .item-description {
-  display: flex;
+  visibility: visible;
+  max-height: 100%;
+  opacity: 1;
+  transition: all 0.3s ease;
   margin: 2rem 0 2rem 0;
 }
 
 .image-container.active button {
-  margin: 2rem 0 2rem 0;
+  /* margin: 2rem 0 2rem 0; */
   display: block;
 }
 
 @media (min-width: 900px) {
-  .image-container {
+  .image-container-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .image-container {
+    min-width: 400px;
   }
 }
